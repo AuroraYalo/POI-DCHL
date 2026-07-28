@@ -1,0 +1,1488 @@
+2026-07-29 04:53:28 1. Parse Arguments
+2026-07-29 04:53:28 Namespace(dataset='NYC', seed=2023, distance_threshold=2.5, num_epochs=30, batch_size=200, emb_dim=128, lr=0.001, decay=0.0005, dropout=0.3, deviceID=0, lambda_cl=0.1, num_mv_layers=3, num_geo_layers=3, num_di_layers=3, temperature=0.1, keep_rate=1, keep_rate_poi=1, lr_scheduler_factor=0.1, save_dir='logs')
+2026-07-29 04:53:28 device: cpu
+2026-07-29 04:53:28 2. Load Dataset
+2026-07-29 04:53:41 3. Construct DataLoader
+2026-07-29 04:53:41 4. Load Model
+2026-07-29 04:53:42 5. Start Training
+2026-07-29 04:53:42 ================= Epoch 0/30 =================
+2026-07-29 04:53:42 Train. Batch 0/5
+2026-07-29 04:53:43 Train. loss_rec: 7.7797; loss_cl_pois: 2.4345; loss_cl_users: 0.5211; loss: 8.0753
+2026-07-29 04:53:45 Train. Batch 1/5
+2026-07-29 04:53:47 Train. loss_rec: 7.7747; loss_cl_pois: 2.3963; loss_cl_users: 0.3741; loss: 8.0517
+2026-07-29 04:53:49 Train. Batch 2/5
+2026-07-29 04:53:51 Train. loss_rec: 7.7345; loss_cl_pois: 2.4004; loss_cl_users: 0.3442; loss: 8.0090
+2026-07-29 04:53:52 Train. Batch 3/5
+2026-07-29 04:53:54 Train. loss_rec: 7.7183; loss_cl_pois: 2.4127; loss_cl_users: 0.3539; loss: 7.9949
+2026-07-29 04:53:56 Train. Batch 4/5
+2026-07-29 04:53:58 Train. loss_rec: 7.8268; loss_cl_pois: 2.4157; loss_cl_users: 0.0681; loss: 8.0752
+2026-07-29 04:53:59 Training finishes at this epoch. It takes 0.29438259998957317 min
+2026-07-29 04:53:59 Training loss: 8.0412
+2026-07-29 04:53:59 Training Epoch 0/30 results:
+2026-07-29 04:53:59 Recall@1: 0.0340
+2026-07-29 04:53:59 NDCG@1: 0.0340
+2026-07-29 04:53:59 Recall@5: 0.1406
+2026-07-29 04:53:59 NDCG@5: 0.0852
+2026-07-29 04:53:59 Recall@10: 0.2282
+2026-07-29 04:53:59 NDCG@10: 0.1142
+2026-07-29 04:53:59 Recall@20: 0.2702
+2026-07-29 04:53:59 NDCG@20: 0.1250
+2026-07-29 04:53:59 
+
+2026-07-29 04:53:59 Testing
+2026-07-29 04:53:59 Test. Batch 0/5
+2026-07-29 04:54:01 Test. loss_rec: 7.6111; loss_cl_pois: 2.9194; loss_cl_users: 0.3553; loss: 7.9386
+2026-07-29 04:54:01 Test. Batch 1/5
+2026-07-29 04:54:03 Test. loss_rec: 7.4316; loss_cl_pois: 2.9109; loss_cl_users: 0.3298; loss: 7.7556
+2026-07-29 04:54:03 Test. Batch 2/5
+2026-07-29 04:54:04 Test. loss_rec: 7.4978; loss_cl_pois: 2.9133; loss_cl_users: 0.3677; loss: 7.8259
+2026-07-29 04:54:04 Test. Batch 3/5
+2026-07-29 04:54:06 Test. loss_rec: 7.4934; loss_cl_pois: 2.9172; loss_cl_users: 0.3186; loss: 7.8170
+2026-07-29 04:54:06 Test. Batch 4/5
+2026-07-29 04:54:07 Test. loss_rec: 7.6624; loss_cl_pois: 2.9139; loss_cl_users: 0.0632; loss: 7.9602
+2026-07-29 04:54:07 Testing finishes
+2026-07-29 04:54:07 Testing loss: 7.8594505310058596
+2026-07-29 04:54:07 Testing results:
+2026-07-29 04:54:07 Recall@1: 0.0799
+2026-07-29 04:54:07 NDCG@1: 0.0799
+2026-07-29 04:54:07 Recall@5: 0.2304
+2026-07-29 04:54:07 NDCG@5: 0.1566
+2026-07-29 04:54:07 Recall@10: 0.2932
+2026-07-29 04:54:07 NDCG@10: 0.1769
+2026-07-29 04:54:07 Recall@20: 0.3271
+2026-07-29 04:54:07 NDCG@20: 0.1857
+2026-07-29 04:54:07 Update test results and save model at epoch0
+2026-07-29 04:54:07 ==================================
+
+
+2026-07-29 04:54:07 ================= Epoch 1/30 =================
+2026-07-29 04:54:07 Train. Batch 0/5
+2026-07-29 04:54:09 Train. loss_rec: 7.0443; loss_cl_pois: 2.4108; loss_cl_users: 0.3314; loss: 7.3185
+2026-07-29 04:54:11 Train. Batch 1/5
+2026-07-29 04:54:13 Train. loss_rec: 7.0188; loss_cl_pois: 2.4262; loss_cl_users: 0.3414; loss: 7.2956
+2026-07-29 04:54:14 Train. Batch 2/5
+2026-07-29 04:54:16 Train. loss_rec: 6.7604; loss_cl_pois: 2.4216; loss_cl_users: 0.3267; loss: 7.0352
+2026-07-29 04:54:18 Train. Batch 3/5
+2026-07-29 04:54:20 Train. loss_rec: 6.8165; loss_cl_pois: 2.4096; loss_cl_users: 0.3496; loss: 7.0925
+2026-07-29 04:54:22 Train. Batch 4/5
+2026-07-29 04:54:23 Train. loss_rec: 6.6066; loss_cl_pois: 2.3985; loss_cl_users: 0.0547; loss: 6.8519
+2026-07-29 04:54:25 Training finishes at this epoch. It takes 0.30162660678227743 min
+2026-07-29 04:54:25 Training loss: 7.1187
+2026-07-29 04:54:25 Training Epoch 1/30 results:
+2026-07-29 04:54:25 Recall@1: 0.3540
+2026-07-29 04:54:25 NDCG@1: 0.3540
+2026-07-29 04:54:25 Recall@5: 0.5305
+2026-07-29 04:54:25 NDCG@5: 0.4436
+2026-07-29 04:54:25 Recall@10: 0.6401
+2026-07-29 04:54:25 NDCG@10: 0.4799
+2026-07-29 04:54:25 Recall@20: 0.7168
+2026-07-29 04:54:25 NDCG@20: 0.4995
+2026-07-29 04:54:25 
+
+2026-07-29 04:54:25 Testing
+2026-07-29 04:54:25 Test. Batch 0/5
+2026-07-29 04:54:27 Test. loss_rec: 7.3519; loss_cl_pois: 2.9082; loss_cl_users: 0.3369; loss: 7.6764
+2026-07-29 04:54:27 Test. Batch 1/5
+2026-07-29 04:54:28 Test. loss_rec: 7.4327; loss_cl_pois: 2.8974; loss_cl_users: 0.3397; loss: 7.7564
+2026-07-29 04:54:28 Test. Batch 2/5
+2026-07-29 04:54:30 Test. loss_rec: 7.4053; loss_cl_pois: 2.9027; loss_cl_users: 0.3331; loss: 7.7288
+2026-07-29 04:54:30 Test. Batch 3/5
+2026-07-29 04:54:31 Test. loss_rec: 7.3028; loss_cl_pois: 2.9024; loss_cl_users: 0.3276; loss: 7.6258
+2026-07-29 04:54:31 Test. Batch 4/5
+2026-07-29 04:54:33 Test. loss_rec: 7.3786; loss_cl_pois: 2.9045; loss_cl_users: 0.0523; loss: 7.6743
+2026-07-29 04:54:33 Testing finishes
+2026-07-29 04:54:33 Testing loss: 7.692349624633789
+2026-07-29 04:54:33 Testing results:
+2026-07-29 04:54:33 Recall@1: 0.1096
+2026-07-29 04:54:33 NDCG@1: 0.1096
+2026-07-29 04:54:33 Recall@5: 0.2622
+2026-07-29 04:54:33 NDCG@5: 0.1893
+2026-07-29 04:54:33 Recall@10: 0.3755
+2026-07-29 04:54:33 NDCG@10: 0.2260
+2026-07-29 04:54:33 Recall@20: 0.4192
+2026-07-29 04:54:33 NDCG@20: 0.2373
+2026-07-29 04:54:33 Update test results and save model at epoch1
+2026-07-29 04:54:33 ==================================
+
+
+2026-07-29 04:54:33 ================= Epoch 2/30 =================
+2026-07-29 04:54:33 Train. Batch 0/5
+2026-07-29 04:54:35 Train. loss_rec: 6.3658; loss_cl_pois: 2.4006; loss_cl_users: 0.2728; loss: 6.6331
+2026-07-29 04:54:36 Train. Batch 1/5
+2026-07-29 04:54:38 Train. loss_rec: 6.3504; loss_cl_pois: 2.4096; loss_cl_users: 0.3308; loss: 6.6245
+2026-07-29 04:54:40 Train. Batch 2/5
+2026-07-29 04:54:42 Train. loss_rec: 6.2938; loss_cl_pois: 2.4091; loss_cl_users: 0.3371; loss: 6.5684
+2026-07-29 04:54:44 Train. Batch 3/5
+2026-07-29 04:54:45 Train. loss_rec: 6.1962; loss_cl_pois: 2.4171; loss_cl_users: 0.3041; loss: 6.4683
+2026-07-29 04:54:47 Train. Batch 4/5
+2026-07-29 04:54:49 Train. loss_rec: 6.0460; loss_cl_pois: 2.4155; loss_cl_users: 0.0423; loss: 6.2918
+2026-07-29 04:54:51 Training finishes at this epoch. It takes 0.2949381947517395 min
+2026-07-29 04:54:51 Training loss: 6.5172
+2026-07-29 04:54:51 Training Epoch 2/30 results:
+2026-07-29 04:54:51 Recall@1: 0.6399
+2026-07-29 04:54:51 NDCG@1: 0.6399
+2026-07-29 04:54:51 Recall@5: 0.8315
+2026-07-29 04:54:51 NDCG@5: 0.7384
+2026-07-29 04:54:51 Recall@10: 0.9114
+2026-07-29 04:54:51 NDCG@10: 0.7645
+2026-07-29 04:54:51 Recall@20: 0.9501
+2026-07-29 04:54:51 NDCG@20: 0.7746
+2026-07-29 04:54:51 
+
+2026-07-29 04:54:51 Testing
+2026-07-29 04:54:51 Test. Batch 0/5
+2026-07-29 04:54:52 Test. loss_rec: 7.2598; loss_cl_pois: 2.9210; loss_cl_users: 0.3339; loss: 7.5853
+2026-07-29 04:54:52 Test. Batch 1/5
+2026-07-29 04:54:54 Test. loss_rec: 7.2159; loss_cl_pois: 2.9242; loss_cl_users: 0.3677; loss: 7.5450
+2026-07-29 04:54:54 Test. Batch 2/5
+2026-07-29 04:54:55 Test. loss_rec: 7.2406; loss_cl_pois: 2.9151; loss_cl_users: 0.3332; loss: 7.5655
+2026-07-29 04:54:55 Test. Batch 3/5
+2026-07-29 04:54:57 Test. loss_rec: 7.3969; loss_cl_pois: 2.9183; loss_cl_users: 0.3214; loss: 7.7209
+2026-07-29 04:54:57 Test. Batch 4/5
+2026-07-29 04:54:58 Test. loss_rec: 6.8527; loss_cl_pois: 2.9209; loss_cl_users: 0.1188; loss: 7.1566
+2026-07-29 04:54:58 Testing finishes
+2026-07-29 04:54:58 Testing loss: 7.514662075042724
+2026-07-29 04:54:58 Testing results:
+2026-07-29 04:54:58 Recall@1: 0.1453
+2026-07-29 04:54:58 NDCG@1: 0.1453
+2026-07-29 04:54:58 Recall@5: 0.3452
+2026-07-29 04:54:58 NDCG@5: 0.2523
+2026-07-29 04:54:58 Recall@10: 0.4379
+2026-07-29 04:54:58 NDCG@10: 0.2827
+2026-07-29 04:54:58 Recall@20: 0.4608
+2026-07-29 04:54:58 NDCG@20: 0.2883
+2026-07-29 04:54:58 Update test results and save model at epoch2
+2026-07-29 04:54:58 ==================================
+
+
+2026-07-29 04:54:58 ================= Epoch 3/30 =================
+2026-07-29 04:54:58 Train. Batch 0/5
+2026-07-29 04:55:00 Train. loss_rec: 5.8527; loss_cl_pois: 2.4254; loss_cl_users: 0.3133; loss: 6.1265
+2026-07-29 04:55:02 Train. Batch 1/5
+2026-07-29 04:55:04 Train. loss_rec: 5.8319; loss_cl_pois: 2.4326; loss_cl_users: 0.2787; loss: 6.1030
+2026-07-29 04:55:06 Train. Batch 2/5
+2026-07-29 04:55:07 Train. loss_rec: 5.7973; loss_cl_pois: 2.4291; loss_cl_users: 0.2967; loss: 6.0699
+2026-07-29 04:55:09 Train. Batch 3/5
+2026-07-29 04:55:11 Train. loss_rec: 5.7090; loss_cl_pois: 2.4139; loss_cl_users: 0.3159; loss: 5.9820
+2026-07-29 04:55:13 Train. Batch 4/5
+2026-07-29 04:55:14 Train. loss_rec: 5.8111; loss_cl_pois: 2.4257; loss_cl_users: 0.0475; loss: 6.0585
+2026-07-29 04:55:16 Training finishes at this epoch. It takes 0.29682650963465373 min
+2026-07-29 04:55:16 Training loss: 6.0680
+2026-07-29 04:55:16 Training Epoch 3/30 results:
+2026-07-29 04:55:16 Recall@1: 0.8149
+2026-07-29 04:55:16 NDCG@1: 0.8149
+2026-07-29 04:55:16 Recall@5: 0.9670
+2026-07-29 04:55:16 NDCG@5: 0.8958
+2026-07-29 04:55:16 Recall@10: 0.9860
+2026-07-29 04:55:16 NDCG@10: 0.9021
+2026-07-29 04:55:16 Recall@20: 0.9920
+2026-07-29 04:55:16 NDCG@20: 0.9036
+2026-07-29 04:55:16 
+
+2026-07-29 04:55:16 Testing
+2026-07-29 04:55:16 Test. Batch 0/5
+2026-07-29 04:55:18 Test. loss_rec: 7.1915; loss_cl_pois: 2.9325; loss_cl_users: 0.3827; loss: 7.5230
+2026-07-29 04:55:18 Test. Batch 1/5
+2026-07-29 04:55:19 Test. loss_rec: 7.0219; loss_cl_pois: 2.9312; loss_cl_users: 0.3452; loss: 7.3495
+2026-07-29 04:55:19 Test. Batch 2/5
+2026-07-29 04:55:21 Test. loss_rec: 7.2480; loss_cl_pois: 2.9352; loss_cl_users: 0.3334; loss: 7.5749
+2026-07-29 04:55:21 Test. Batch 3/5
+2026-07-29 04:55:22 Test. loss_rec: 7.2291; loss_cl_pois: 2.9309; loss_cl_users: 0.3595; loss: 7.5582
+2026-07-29 04:55:22 Test. Batch 4/5
+2026-07-29 04:55:24 Test. loss_rec: 7.0833; loss_cl_pois: 2.9313; loss_cl_users: 0.0428; loss: 7.3807
+2026-07-29 04:55:24 Testing finishes
+2026-07-29 04:55:24 Testing loss: 7.477263641357422
+2026-07-29 04:55:24 Testing results:
+2026-07-29 04:55:24 Recall@1: 0.1744
+2026-07-29 04:55:24 NDCG@1: 0.1744
+2026-07-29 04:55:24 Recall@5: 0.3854
+2026-07-29 04:55:24 NDCG@5: 0.2814
+2026-07-29 04:55:24 Recall@10: 0.4361
+2026-07-29 04:55:24 NDCG@10: 0.2985
+2026-07-29 04:55:24 Recall@20: 0.4589
+2026-07-29 04:55:24 NDCG@20: 0.3043
+2026-07-29 04:55:24 Update test results and save model at epoch3
+2026-07-29 04:55:24 ==================================
+
+
+2026-07-29 04:55:24 ================= Epoch 4/30 =================
+2026-07-29 04:55:24 Train. Batch 0/5
+2026-07-29 04:55:26 Train. loss_rec: 5.5442; loss_cl_pois: 2.4391; loss_cl_users: 0.3040; loss: 5.8185
+2026-07-29 04:55:27 Train. Batch 1/5
+2026-07-29 04:55:29 Train. loss_rec: 5.4284; loss_cl_pois: 2.4261; loss_cl_users: 0.3138; loss: 5.7023
+2026-07-29 04:55:31 Train. Batch 2/5
+2026-07-29 04:55:33 Train. loss_rec: 5.3764; loss_cl_pois: 2.4285; loss_cl_users: 0.2677; loss: 5.6461
+2026-07-29 04:55:35 Train. Batch 3/5
+2026-07-29 04:55:36 Train. loss_rec: 5.3446; loss_cl_pois: 2.4341; loss_cl_users: 0.3279; loss: 5.6208
+2026-07-29 04:55:38 Train. Batch 4/5
+2026-07-29 04:55:40 Train. loss_rec: 5.3182; loss_cl_pois: 2.4287; loss_cl_users: 0.0547; loss: 5.5665
+2026-07-29 04:55:42 Training finishes at this epoch. It takes 0.29749385913213094 min
+2026-07-29 04:55:42 Training loss: 5.6709
+2026-07-29 04:55:42 Training Epoch 4/30 results:
+2026-07-29 04:55:42 Recall@1: 0.9252
+2026-07-29 04:55:42 NDCG@1: 0.9252
+2026-07-29 04:55:42 Recall@5: 0.9900
+2026-07-29 04:55:42 NDCG@5: 0.9616
+2026-07-29 04:55:42 Recall@10: 0.9980
+2026-07-29 04:55:42 NDCG@10: 0.9642
+2026-07-29 04:55:42 Recall@20: 0.9990
+2026-07-29 04:55:42 NDCG@20: 0.9645
+2026-07-29 04:55:42 
+
+2026-07-29 04:55:42 Testing
+2026-07-29 04:55:42 Test. Batch 0/5
+2026-07-29 04:55:43 Test. loss_rec: 7.0865; loss_cl_pois: 2.9350; loss_cl_users: 0.3204; loss: 7.4120
+2026-07-29 04:55:43 Test. Batch 1/5
+2026-07-29 04:55:45 Test. loss_rec: 7.2051; loss_cl_pois: 2.9272; loss_cl_users: 0.3361; loss: 7.5315
+2026-07-29 04:55:45 Test. Batch 2/5
+2026-07-29 04:55:46 Test. loss_rec: 7.0768; loss_cl_pois: 2.9319; loss_cl_users: 0.3391; loss: 7.4039
+2026-07-29 04:55:46 Test. Batch 3/5
+2026-07-29 04:55:48 Test. loss_rec: 7.0132; loss_cl_pois: 2.9290; loss_cl_users: 0.3598; loss: 7.3421
+2026-07-29 04:55:48 Test. Batch 4/5
+2026-07-29 04:55:49 Test. loss_rec: 6.9895; loss_cl_pois: 2.9247; loss_cl_users: 0.0541; loss: 7.2874
+2026-07-29 04:55:49 Testing finishes
+2026-07-29 04:55:49 Testing loss: 7.3953577995300295
+2026-07-29 04:55:49 Testing results:
+2026-07-29 04:55:49 Recall@1: 0.2281
+2026-07-29 04:55:49 NDCG@1: 0.2281
+2026-07-29 04:55:49 Recall@5: 0.4051
+2026-07-29 04:55:49 NDCG@5: 0.3186
+2026-07-29 04:55:49 Recall@10: 0.4440
+2026-07-29 04:55:49 NDCG@10: 0.3313
+2026-07-29 04:55:49 Recall@20: 0.4668
+2026-07-29 04:55:49 NDCG@20: 0.3372
+2026-07-29 04:55:49 Update test results and save model at epoch4
+2026-07-29 04:55:49 ==================================
+
+
+2026-07-29 04:55:49 ================= Epoch 5/30 =================
+2026-07-29 04:55:49 Train. Batch 0/5
+2026-07-29 04:55:51 Train. loss_rec: 5.1656; loss_cl_pois: 2.4301; loss_cl_users: 0.2812; loss: 5.4367
+2026-07-29 04:55:53 Train. Batch 1/5
+2026-07-29 04:55:55 Train. loss_rec: 5.1779; loss_cl_pois: 2.4364; loss_cl_users: 0.3067; loss: 5.4522
+2026-07-29 04:55:56 Train. Batch 2/5
+2026-07-29 04:55:58 Train. loss_rec: 5.0444; loss_cl_pois: 2.4333; loss_cl_users: 0.3649; loss: 5.3243
+2026-07-29 04:56:00 Train. Batch 3/5
+2026-07-29 04:56:02 Train. loss_rec: 5.0199; loss_cl_pois: 2.4376; loss_cl_users: 0.3150; loss: 5.2951
+2026-07-29 04:56:04 Train. Batch 4/5
+2026-07-29 04:56:05 Train. loss_rec: 5.0516; loss_cl_pois: 2.4350; loss_cl_users: 0.0539; loss: 5.3005
+2026-07-29 04:56:07 Training finishes at this epoch. It takes 0.3014654040336609 min
+2026-07-29 04:56:07 Training loss: 5.3618
+2026-07-29 04:56:07 Training Epoch 5/30 results:
+2026-07-29 04:56:07 Recall@1: 0.9652
+2026-07-29 04:56:07 NDCG@1: 0.9652
+2026-07-29 04:56:07 Recall@5: 0.9970
+2026-07-29 04:56:07 NDCG@5: 0.9824
+2026-07-29 04:56:07 Recall@10: 1.0000
+2026-07-29 04:56:07 NDCG@10: 0.9834
+2026-07-29 04:56:07 Recall@20: 1.0000
+2026-07-29 04:56:07 NDCG@20: 0.9834
+2026-07-29 04:56:07 
+
+2026-07-29 04:56:07 Testing
+2026-07-29 04:56:07 Test. Batch 0/5
+2026-07-29 04:56:09 Test. loss_rec: 7.0884; loss_cl_pois: 2.9372; loss_cl_users: 0.3340; loss: 7.4155
+2026-07-29 04:56:09 Test. Batch 1/5
+2026-07-29 04:56:10 Test. loss_rec: 7.0819; loss_cl_pois: 2.9412; loss_cl_users: 0.3493; loss: 7.4110
+2026-07-29 04:56:10 Test. Batch 2/5
+2026-07-29 04:56:12 Test. loss_rec: 6.9720; loss_cl_pois: 2.9382; loss_cl_users: 0.4057; loss: 7.3064
+2026-07-29 04:56:12 Test. Batch 3/5
+2026-07-29 04:56:13 Test. loss_rec: 7.0166; loss_cl_pois: 2.9364; loss_cl_users: 0.3792; loss: 7.3482
+2026-07-29 04:56:13 Test. Batch 4/5
+2026-07-29 04:56:15 Test. loss_rec: 6.8640; loss_cl_pois: 2.9276; loss_cl_users: 0.0460; loss: 7.1613
+2026-07-29 04:56:15 Testing finishes
+2026-07-29 04:56:15 Testing loss: 7.328480625152588
+2026-07-29 04:56:15 Testing results:
+2026-07-29 04:56:15 Recall@1: 0.2677
+2026-07-29 04:56:15 NDCG@1: 0.2677
+2026-07-29 04:56:15 Recall@5: 0.3964
+2026-07-29 04:56:15 NDCG@5: 0.3367
+2026-07-29 04:56:15 Recall@10: 0.4264
+2026-07-29 04:56:15 NDCG@10: 0.3465
+2026-07-29 04:56:15 Recall@20: 0.4424
+2026-07-29 04:56:15 NDCG@20: 0.3508
+2026-07-29 04:56:15 ==================================
+
+
+2026-07-29 04:56:15 ================= Epoch 6/30 =================
+2026-07-29 04:56:15 Train. Batch 0/5
+2026-07-29 04:56:17 Train. loss_rec: 4.9103; loss_cl_pois: 2.4407; loss_cl_users: 0.3217; loss: 5.1865
+2026-07-29 04:56:18 Train. Batch 1/5
+2026-07-29 04:56:20 Train. loss_rec: 4.8593; loss_cl_pois: 2.4488; loss_cl_users: 0.3121; loss: 5.1354
+2026-07-29 04:56:22 Train. Batch 2/5
+2026-07-29 04:56:24 Train. loss_rec: 4.8112; loss_cl_pois: 2.4401; loss_cl_users: 0.2998; loss: 5.0851
+2026-07-29 04:56:25 Train. Batch 3/5
+2026-07-29 04:56:27 Train. loss_rec: 4.8123; loss_cl_pois: 2.4379; loss_cl_users: 0.3688; loss: 5.0930
+2026-07-29 04:56:29 Train. Batch 4/5
+2026-07-29 04:56:31 Train. loss_rec: 4.7933; loss_cl_pois: 2.4373; loss_cl_users: 0.0873; loss: 5.0458
+2026-07-29 04:56:33 Training finishes at this epoch. It takes 0.2981628735860189 min
+2026-07-29 04:56:33 Training loss: 5.1092
+2026-07-29 04:56:33 Training Epoch 6/30 results:
+2026-07-29 04:56:33 Recall@1: 0.9821
+2026-07-29 04:56:33 NDCG@1: 0.9821
+2026-07-29 04:56:33 Recall@5: 1.0000
+2026-07-29 04:56:33 NDCG@5: 0.9926
+2026-07-29 04:56:33 Recall@10: 1.0000
+2026-07-29 04:56:33 NDCG@10: 0.9926
+2026-07-29 04:56:33 Recall@20: 1.0000
+2026-07-29 04:56:33 NDCG@20: 0.9926
+2026-07-29 04:56:33 
+
+2026-07-29 04:56:33 Testing
+2026-07-29 04:56:33 Test. Batch 0/5
+2026-07-29 04:56:34 Test. loss_rec: 6.9761; loss_cl_pois: 2.9296; loss_cl_users: 0.3634; loss: 7.3054
+2026-07-29 04:56:34 Test. Batch 1/5
+2026-07-29 04:56:36 Test. loss_rec: 6.9809; loss_cl_pois: 2.9211; loss_cl_users: 0.3534; loss: 7.3083
+2026-07-29 04:56:36 Test. Batch 2/5
+2026-07-29 04:56:37 Test. loss_rec: 7.0217; loss_cl_pois: 2.9272; loss_cl_users: 0.3496; loss: 7.3494
+2026-07-29 04:56:37 Test. Batch 3/5
+2026-07-29 04:56:39 Test. loss_rec: 6.9180; loss_cl_pois: 2.9327; loss_cl_users: 0.3616; loss: 7.2475
+2026-07-29 04:56:39 Test. Batch 4/5
+2026-07-29 04:56:40 Test. loss_rec: 7.1706; loss_cl_pois: 2.9208; loss_cl_users: 0.0474; loss: 7.4674
+2026-07-29 04:56:40 Testing finishes
+2026-07-29 04:56:40 Testing loss: 7.335608196258545
+2026-07-29 04:56:40 Testing results:
+2026-07-29 04:56:40 Recall@1: 0.2591
+2026-07-29 04:56:40 NDCG@1: 0.2591
+2026-07-29 04:56:40 Recall@5: 0.3847
+2026-07-29 04:56:40 NDCG@5: 0.3261
+2026-07-29 04:56:40 Recall@10: 0.4235
+2026-07-29 04:56:40 NDCG@10: 0.3387
+2026-07-29 04:56:40 Recall@20: 0.4355
+2026-07-29 04:56:40 NDCG@20: 0.3418
+2026-07-29 04:56:40 ==================================
+
+
+2026-07-29 04:56:40 ================= Epoch 7/30 =================
+2026-07-29 04:56:40 Train. Batch 0/5
+2026-07-29 04:56:42 Train. loss_rec: 4.6526; loss_cl_pois: 2.4308; loss_cl_users: 0.3034; loss: 4.9260
+2026-07-29 04:56:44 Train. Batch 1/5
+2026-07-29 04:56:46 Train. loss_rec: 4.6502; loss_cl_pois: 2.4335; loss_cl_users: 0.3336; loss: 4.9269
+2026-07-29 04:56:48 Train. Batch 2/5
+2026-07-29 04:56:49 Train. loss_rec: 4.6301; loss_cl_pois: 2.4304; loss_cl_users: 0.3263; loss: 4.9058
+2026-07-29 04:56:51 Train. Batch 3/5
+2026-07-29 04:56:53 Train. loss_rec: 4.6114; loss_cl_pois: 2.4351; loss_cl_users: 0.3308; loss: 4.8880
+2026-07-29 04:56:55 Train. Batch 4/5
+2026-07-29 04:56:57 Train. loss_rec: 4.6302; loss_cl_pois: 2.4281; loss_cl_users: 0.0648; loss: 4.8795
+2026-07-29 04:56:59 Training finishes at this epoch. It takes 0.30204908847808837 min
+2026-07-29 04:56:59 Training loss: 4.9052
+2026-07-29 04:56:59 Training Epoch 7/30 results:
+2026-07-29 04:56:59 Recall@1: 0.9950
+2026-07-29 04:56:59 NDCG@1: 0.9950
+2026-07-29 04:56:59 Recall@5: 1.0000
+2026-07-29 04:56:59 NDCG@5: 0.9978
+2026-07-29 04:56:59 Recall@10: 1.0000
+2026-07-29 04:56:59 NDCG@10: 0.9978
+2026-07-29 04:56:59 Recall@20: 1.0000
+2026-07-29 04:56:59 NDCG@20: 0.9978
+2026-07-29 04:56:59 
+
+2026-07-29 04:56:59 Testing
+2026-07-29 04:56:59 Test. Batch 0/5
+2026-07-29 04:57:00 Test. loss_rec: 7.0907; loss_cl_pois: 2.9360; loss_cl_users: 0.3520; loss: 7.4195
+2026-07-29 04:57:00 Test. Batch 1/5
+2026-07-29 04:57:02 Test. loss_rec: 7.0517; loss_cl_pois: 2.9290; loss_cl_users: 0.3499; loss: 7.3796
+2026-07-29 04:57:02 Test. Batch 2/5
+2026-07-29 04:57:03 Test. loss_rec: 6.8996; loss_cl_pois: 2.9257; loss_cl_users: 0.3826; loss: 7.2304
+2026-07-29 04:57:03 Test. Batch 3/5
+2026-07-29 04:57:05 Test. loss_rec: 6.7453; loss_cl_pois: 2.9204; loss_cl_users: 0.3873; loss: 7.0761
+2026-07-29 04:57:05 Test. Batch 4/5
+2026-07-29 04:57:06 Test. loss_rec: 6.9049; loss_cl_pois: 2.9200; loss_cl_users: 0.0750; loss: 7.2044
+2026-07-29 04:57:06 Testing finishes
+2026-07-29 04:57:06 Testing loss: 7.262000942230225
+2026-07-29 04:57:06 Testing results:
+2026-07-29 04:57:06 Recall@1: 0.2661
+2026-07-29 04:57:06 NDCG@1: 0.2661
+2026-07-29 04:57:06 Recall@5: 0.3965
+2026-07-29 04:57:06 NDCG@5: 0.3331
+2026-07-29 04:57:06 Recall@10: 0.4292
+2026-07-29 04:57:06 NDCG@10: 0.3442
+2026-07-29 04:57:06 Recall@20: 0.4511
+2026-07-29 04:57:06 NDCG@20: 0.3501
+2026-07-29 04:57:06 ==================================
+
+
+2026-07-29 04:57:06 ================= Epoch 8/30 =================
+2026-07-29 04:57:06 Train. Batch 0/5
+2026-07-29 04:57:08 Train. loss_rec: 4.4974; loss_cl_pois: 2.4300; loss_cl_users: 0.3419; loss: 4.7746
+2026-07-29 04:57:10 Train. Batch 1/5
+2026-07-29 04:57:11 Train. loss_rec: 4.4836; loss_cl_pois: 2.4220; loss_cl_users: 0.3333; loss: 4.7591
+2026-07-29 04:57:13 Train. Batch 2/5
+2026-07-29 04:57:15 Train. loss_rec: 4.4504; loss_cl_pois: 2.4317; loss_cl_users: 0.3408; loss: 4.7277
+2026-07-29 04:57:17 Train. Batch 3/5
+2026-07-29 04:57:19 Train. loss_rec: 4.4314; loss_cl_pois: 2.4180; loss_cl_users: 0.3951; loss: 4.7127
+2026-07-29 04:57:21 Train. Batch 4/5
+2026-07-29 04:57:22 Train. loss_rec: 4.3868; loss_cl_pois: 2.4268; loss_cl_users: 0.0459; loss: 4.6341
+2026-07-29 04:57:24 Training finishes at this epoch. It takes 0.3007937471071879 min
+2026-07-29 04:57:24 Training loss: 4.7216
+2026-07-29 04:57:24 Training Epoch 8/30 results:
+2026-07-29 04:57:24 Recall@1: 0.9990
+2026-07-29 04:57:24 NDCG@1: 0.9990
+2026-07-29 04:57:24 Recall@5: 1.0000
+2026-07-29 04:57:24 NDCG@5: 0.9995
+2026-07-29 04:57:24 Recall@10: 1.0000
+2026-07-29 04:57:24 NDCG@10: 0.9995
+2026-07-29 04:57:24 Recall@20: 1.0000
+2026-07-29 04:57:24 NDCG@20: 0.9995
+2026-07-29 04:57:24 
+
+2026-07-29 04:57:24 Testing
+2026-07-29 04:57:24 Test. Batch 0/5
+2026-07-29 04:57:26 Test. loss_rec: 6.7843; loss_cl_pois: 2.9181; loss_cl_users: 0.3593; loss: 7.1120
+2026-07-29 04:57:26 Test. Batch 1/5
+2026-07-29 04:57:27 Test. loss_rec: 6.8849; loss_cl_pois: 2.9306; loss_cl_users: 0.4298; loss: 7.2209
+2026-07-29 04:57:27 Test. Batch 2/5
+2026-07-29 04:57:29 Test. loss_rec: 7.0085; loss_cl_pois: 2.9187; loss_cl_users: 0.3527; loss: 7.3356
+2026-07-29 04:57:29 Test. Batch 3/5
+2026-07-29 04:57:30 Test. loss_rec: 6.9844; loss_cl_pois: 2.9226; loss_cl_users: 0.3636; loss: 7.3130
+2026-07-29 04:57:31 Test. Batch 4/5
+2026-07-29 04:57:32 Test. loss_rec: 6.9189; loss_cl_pois: 2.9259; loss_cl_users: 0.0759; loss: 7.2190
+2026-07-29 04:57:32 Testing finishes
+2026-07-29 04:57:32 Testing loss: 7.240122127532959
+2026-07-29 04:57:32 Testing results:
+2026-07-29 04:57:32 Recall@1: 0.2738
+2026-07-29 04:57:32 NDCG@1: 0.2738
+2026-07-29 04:57:32 Recall@5: 0.4022
+2026-07-29 04:57:32 NDCG@5: 0.3396
+2026-07-29 04:57:32 Recall@10: 0.4400
+2026-07-29 04:57:32 NDCG@10: 0.3518
+2026-07-29 04:57:32 Recall@20: 0.4550
+2026-07-29 04:57:32 NDCG@20: 0.3557
+2026-07-29 04:57:32 ==================================
+
+
+2026-07-29 04:57:32 ================= Epoch 9/30 =================
+2026-07-29 04:57:32 Train. Batch 0/5
+2026-07-29 04:57:34 Train. loss_rec: 4.3363; loss_cl_pois: 2.4147; loss_cl_users: 0.3623; loss: 4.6140
+2026-07-29 04:57:36 Train. Batch 1/5
+2026-07-29 04:57:38 Train. loss_rec: 4.3159; loss_cl_pois: 2.4225; loss_cl_users: 0.3676; loss: 4.5950
+2026-07-29 04:57:40 Train. Batch 2/5
+2026-07-29 04:57:43 Train. loss_rec: 4.2877; loss_cl_pois: 2.4320; loss_cl_users: 0.4083; loss: 4.5717
+2026-07-29 04:57:45 Train. Batch 3/5
+2026-07-29 04:57:47 Train. loss_rec: 4.2949; loss_cl_pois: 2.4244; loss_cl_users: 0.3985; loss: 4.5771
+2026-07-29 04:57:49 Train. Batch 4/5
+2026-07-29 04:57:51 Train. loss_rec: 4.3291; loss_cl_pois: 2.4289; loss_cl_users: 0.0565; loss: 4.5777
+2026-07-29 04:57:53 Training finishes at this epoch. It takes 0.3544874668121338 min
+2026-07-29 04:57:53 Training loss: 4.5871
+2026-07-29 04:57:53 Training Epoch 9/30 results:
+2026-07-29 04:57:53 Recall@1: 0.9990
+2026-07-29 04:57:53 NDCG@1: 0.9990
+2026-07-29 04:57:53 Recall@5: 1.0000
+2026-07-29 04:57:53 NDCG@5: 0.9996
+2026-07-29 04:57:53 Recall@10: 1.0000
+2026-07-29 04:57:53 NDCG@10: 0.9996
+2026-07-29 04:57:53 Recall@20: 1.0000
+2026-07-29 04:57:53 NDCG@20: 0.9996
+2026-07-29 04:57:53 
+
+2026-07-29 04:57:53 Testing
+2026-07-29 04:57:53 Test. Batch 0/5
+2026-07-29 04:57:55 Test. loss_rec: 6.9152; loss_cl_pois: 2.9150; loss_cl_users: 0.3486; loss: 7.2415
+2026-07-29 04:57:55 Test. Batch 1/5
+2026-07-29 04:57:56 Test. loss_rec: 6.7528; loss_cl_pois: 2.9270; loss_cl_users: 0.3994; loss: 7.0854
+2026-07-29 04:57:56 Test. Batch 2/5
+2026-07-29 04:57:58 Test. loss_rec: 6.8250; loss_cl_pois: 2.9235; loss_cl_users: 0.3712; loss: 7.1545
+2026-07-29 04:57:58 Test. Batch 3/5
+2026-07-29 04:58:00 Test. loss_rec: 7.0294; loss_cl_pois: 2.9249; loss_cl_users: 0.4126; loss: 7.3631
+2026-07-29 04:58:00 Test. Batch 4/5
+2026-07-29 04:58:02 Test. loss_rec: 6.9735; loss_cl_pois: 2.9164; loss_cl_users: 0.0917; loss: 7.2743
+2026-07-29 04:58:02 Testing finishes
+2026-07-29 04:58:02 Testing loss: 7.223781681060791
+2026-07-29 04:58:02 Testing results:
+2026-07-29 04:58:02 Recall@1: 0.2641
+2026-07-29 04:58:02 NDCG@1: 0.2641
+2026-07-29 04:58:02 Recall@5: 0.3975
+2026-07-29 04:58:02 NDCG@5: 0.3339
+2026-07-29 04:58:02 Recall@10: 0.4205
+2026-07-29 04:58:02 NDCG@10: 0.3416
+2026-07-29 04:58:02 Recall@20: 0.4412
+2026-07-29 04:58:02 NDCG@20: 0.3471
+2026-07-29 04:58:02 ==================================
+
+
+2026-07-29 04:58:02 ================= Epoch 10/30 =================
+2026-07-29 04:58:02 Train. Batch 0/5
+2026-07-29 04:58:03 Train. loss_rec: 4.2179; loss_cl_pois: 2.4235; loss_cl_users: 0.3704; loss: 4.4972
+2026-07-29 04:58:05 Train. Batch 1/5
+2026-07-29 04:58:07 Train. loss_rec: 4.1930; loss_cl_pois: 2.4161; loss_cl_users: 0.3717; loss: 4.4718
+2026-07-29 04:58:09 Train. Batch 2/5
+2026-07-29 04:58:11 Train. loss_rec: 4.1933; loss_cl_pois: 2.4160; loss_cl_users: 0.4027; loss: 4.4751
+2026-07-29 04:58:13 Train. Batch 3/5
+2026-07-29 04:58:15 Train. loss_rec: 4.1506; loss_cl_pois: 2.4228; loss_cl_users: 0.4388; loss: 4.4367
+2026-07-29 04:58:18 Train. Batch 4/5
+2026-07-29 04:58:20 Train. loss_rec: 4.0814; loss_cl_pois: 2.4182; loss_cl_users: 0.0706; loss: 4.3303
+2026-07-29 04:58:22 Training finishes at this epoch. It takes 0.3388629953066508 min
+2026-07-29 04:58:22 Training loss: 4.4422
+2026-07-29 04:58:22 Training Epoch 10/30 results:
+2026-07-29 04:58:22 Recall@1: 0.9990
+2026-07-29 04:58:22 NDCG@1: 0.9990
+2026-07-29 04:58:22 Recall@5: 1.0000
+2026-07-29 04:58:22 NDCG@5: 0.9996
+2026-07-29 04:58:22 Recall@10: 1.0000
+2026-07-29 04:58:22 NDCG@10: 0.9996
+2026-07-29 04:58:22 Recall@20: 1.0000
+2026-07-29 04:58:22 NDCG@20: 0.9996
+2026-07-29 04:58:22 
+
+2026-07-29 04:58:22 Testing
+2026-07-29 04:58:22 Test. Batch 0/5
+2026-07-29 04:58:23 Test. loss_rec: 6.8922; loss_cl_pois: 2.9111; loss_cl_users: 0.4307; loss: 7.2264
+2026-07-29 04:58:23 Test. Batch 1/5
+2026-07-29 04:58:25 Test. loss_rec: 6.8400; loss_cl_pois: 2.9176; loss_cl_users: 0.3839; loss: 7.1701
+2026-07-29 04:58:25 Test. Batch 2/5
+2026-07-29 04:58:27 Test. loss_rec: 6.8328; loss_cl_pois: 2.9119; loss_cl_users: 0.3680; loss: 7.1608
+2026-07-29 04:58:27 Test. Batch 3/5
+2026-07-29 04:58:28 Test. loss_rec: 6.8905; loss_cl_pois: 2.9243; loss_cl_users: 0.3784; loss: 7.2208
+2026-07-29 04:58:28 Test. Batch 4/5
+2026-07-29 04:58:30 Test. loss_rec: 6.7049; loss_cl_pois: 2.9232; loss_cl_users: 0.0602; loss: 7.0033
+2026-07-29 04:58:30 Testing finishes
+2026-07-29 04:58:30 Testing loss: 7.156260299682617
+2026-07-29 04:58:30 Testing results:
+2026-07-29 04:58:30 Recall@1: 0.2965
+2026-07-29 04:58:30 NDCG@1: 0.2965
+2026-07-29 04:58:30 Recall@5: 0.3954
+2026-07-29 04:58:30 NDCG@5: 0.3493
+2026-07-29 04:58:30 Recall@10: 0.4360
+2026-07-29 04:58:30 NDCG@10: 0.3632
+2026-07-29 04:58:30 Recall@20: 0.4540
+2026-07-29 04:58:30 NDCG@20: 0.3678
+2026-07-29 04:58:30 ==================================
+
+
+2026-07-29 04:58:30 ================= Epoch 11/30 =================
+2026-07-29 04:58:30 Train. Batch 0/5
+2026-07-29 04:58:32 Train. loss_rec: 4.0909; loss_cl_pois: 2.4155; loss_cl_users: 0.4482; loss: 4.3773
+2026-07-29 04:58:34 Train. Batch 1/5
+2026-07-29 04:58:35 Train. loss_rec: 4.0849; loss_cl_pois: 2.4056; loss_cl_users: 0.4018; loss: 4.3656
+2026-07-29 04:58:37 Train. Batch 2/5
+2026-07-29 04:58:39 Train. loss_rec: 4.0431; loss_cl_pois: 2.4146; loss_cl_users: 0.4652; loss: 4.3310
+2026-07-29 04:58:41 Train. Batch 3/5
+2026-07-29 04:58:42 Train. loss_rec: 4.0544; loss_cl_pois: 2.4155; loss_cl_users: 0.4135; loss: 4.3373
+2026-07-29 04:58:44 Train. Batch 4/5
+2026-07-29 04:58:46 Train. loss_rec: 4.0097; loss_cl_pois: 2.4136; loss_cl_users: 0.0620; loss: 4.2573
+2026-07-29 04:58:48 Training finishes at this epoch. It takes 0.292419958114624 min
+2026-07-29 04:58:48 Training loss: 4.3337
+2026-07-29 04:58:48 Training Epoch 11/30 results:
+2026-07-29 04:58:48 Recall@1: 1.0000
+2026-07-29 04:58:48 NDCG@1: 1.0000
+2026-07-29 04:58:48 Recall@5: 1.0000
+2026-07-29 04:58:48 NDCG@5: 1.0000
+2026-07-29 04:58:48 Recall@10: 1.0000
+2026-07-29 04:58:48 NDCG@10: 1.0000
+2026-07-29 04:58:48 Recall@20: 1.0000
+2026-07-29 04:58:48 NDCG@20: 1.0000
+2026-07-29 04:58:48 
+
+2026-07-29 04:58:48 Testing
+2026-07-29 04:58:48 Test. Batch 0/5
+2026-07-29 04:58:49 Test. loss_rec: 6.8281; loss_cl_pois: 2.9196; loss_cl_users: 0.4056; loss: 7.1606
+2026-07-29 04:58:49 Test. Batch 1/5
+2026-07-29 04:58:51 Test. loss_rec: 6.5952; loss_cl_pois: 2.9234; loss_cl_users: 0.4163; loss: 6.9292
+2026-07-29 04:58:51 Test. Batch 2/5
+2026-07-29 04:58:52 Test. loss_rec: 6.9455; loss_cl_pois: 2.9191; loss_cl_users: 0.3454; loss: 7.2719
+2026-07-29 04:58:52 Test. Batch 3/5
+2026-07-29 04:58:54 Test. loss_rec: 6.9607; loss_cl_pois: 2.9227; loss_cl_users: 0.4135; loss: 7.2943
+2026-07-29 04:58:54 Test. Batch 4/5
+2026-07-29 04:58:55 Test. loss_rec: 6.8158; loss_cl_pois: 2.9086; loss_cl_users: 0.0666; loss: 7.1133
+2026-07-29 04:58:55 Testing finishes
+2026-07-29 04:58:55 Testing loss: 7.153860950469971
+2026-07-29 04:58:55 Testing results:
+2026-07-29 04:58:55 Recall@1: 0.2768
+2026-07-29 04:58:55 NDCG@1: 0.2768
+2026-07-29 04:58:55 Recall@5: 0.3935
+2026-07-29 04:58:55 NDCG@5: 0.3385
+2026-07-29 04:58:55 Recall@10: 0.4165
+2026-07-29 04:58:55 NDCG@10: 0.3462
+2026-07-29 04:58:55 Recall@20: 0.4384
+2026-07-29 04:58:55 NDCG@20: 0.3520
+2026-07-29 04:58:55 ==================================
+
+
+2026-07-29 04:58:55 ================= Epoch 12/30 =================
+2026-07-29 04:58:55 Train. Batch 0/5
+2026-07-29 04:58:57 Train. loss_rec: 3.9808; loss_cl_pois: 2.4228; loss_cl_users: 0.5153; loss: 4.2747
+2026-07-29 04:58:59 Train. Batch 1/5
+2026-07-29 04:59:00 Train. loss_rec: 3.9570; loss_cl_pois: 2.4130; loss_cl_users: 0.5062; loss: 4.2489
+2026-07-29 04:59:02 Train. Batch 2/5
+2026-07-29 04:59:04 Train. loss_rec: 3.9618; loss_cl_pois: 2.4198; loss_cl_users: 0.4836; loss: 4.2522
+2026-07-29 04:59:06 Train. Batch 3/5
+2026-07-29 04:59:07 Train. loss_rec: 3.9459; loss_cl_pois: 2.4190; loss_cl_users: 0.4911; loss: 4.2370
+2026-07-29 04:59:09 Train. Batch 4/5
+2026-07-29 04:59:11 Train. loss_rec: 3.9156; loss_cl_pois: 2.4203; loss_cl_users: 0.1156; loss: 4.1692
+2026-07-29 04:59:13 Training finishes at this epoch. It takes 0.29153289397557575 min
+2026-07-29 04:59:13 Training loss: 4.2364
+2026-07-29 04:59:13 Training Epoch 12/30 results:
+2026-07-29 04:59:13 Recall@1: 1.0000
+2026-07-29 04:59:13 NDCG@1: 1.0000
+2026-07-29 04:59:13 Recall@5: 1.0000
+2026-07-29 04:59:13 NDCG@5: 1.0000
+2026-07-29 04:59:13 Recall@10: 1.0000
+2026-07-29 04:59:13 NDCG@10: 1.0000
+2026-07-29 04:59:13 Recall@20: 1.0000
+2026-07-29 04:59:13 NDCG@20: 1.0000
+2026-07-29 04:59:13 
+
+2026-07-29 04:59:13 Testing
+2026-07-29 04:59:13 Test. Batch 0/5
+2026-07-29 04:59:14 Test. loss_rec: 6.9073; loss_cl_pois: 2.9234; loss_cl_users: 0.4041; loss: 7.2401
+2026-07-29 04:59:14 Test. Batch 1/5
+2026-07-29 04:59:16 Test. loss_rec: 6.6870; loss_cl_pois: 2.9201; loss_cl_users: 0.4389; loss: 7.0229
+2026-07-29 04:59:16 Test. Batch 2/5
+2026-07-29 04:59:17 Test. loss_rec: 6.8501; loss_cl_pois: 2.9165; loss_cl_users: 0.3849; loss: 7.1802
+2026-07-29 04:59:17 Test. Batch 3/5
+2026-07-29 04:59:19 Test. loss_rec: 6.7888; loss_cl_pois: 2.9296; loss_cl_users: 0.3912; loss: 7.1209
+2026-07-29 04:59:19 Test. Batch 4/5
+2026-07-29 04:59:21 Test. loss_rec: 6.7332; loss_cl_pois: 2.9198; loss_cl_users: 0.0622; loss: 7.0314
+2026-07-29 04:59:21 Testing finishes
+2026-07-29 04:59:21 Testing loss: 7.119103336334229
+2026-07-29 04:59:21 Testing results:
+2026-07-29 04:59:21 Recall@1: 0.2827
+2026-07-29 04:59:21 NDCG@1: 0.2827
+2026-07-29 04:59:21 Recall@5: 0.3955
+2026-07-29 04:59:21 NDCG@5: 0.3426
+2026-07-29 04:59:21 Recall@10: 0.4254
+2026-07-29 04:59:21 NDCG@10: 0.3526
+2026-07-29 04:59:21 Recall@20: 0.4422
+2026-07-29 04:59:21 NDCG@20: 0.3571
+2026-07-29 04:59:21 ==================================
+
+
+2026-07-29 04:59:21 ================= Epoch 13/30 =================
+2026-07-29 04:59:21 Train. Batch 0/5
+2026-07-29 04:59:23 Train. loss_rec: 3.9036; loss_cl_pois: 2.4223; loss_cl_users: 0.4810; loss: 4.1940
+2026-07-29 04:59:26 Train. Batch 1/5
+2026-07-29 04:59:28 Train. loss_rec: 3.8752; loss_cl_pois: 2.4121; loss_cl_users: 0.5543; loss: 4.1719
+2026-07-29 04:59:31 Train. Batch 2/5
+2026-07-29 04:59:34 Train. loss_rec: 3.8616; loss_cl_pois: 2.4151; loss_cl_users: 0.5047; loss: 4.1536
+2026-07-29 04:59:37 Train. Batch 3/5
+2026-07-29 04:59:39 Train. loss_rec: 3.8415; loss_cl_pois: 2.4130; loss_cl_users: 0.5073; loss: 4.1335
+2026-07-29 04:59:42 Train. Batch 4/5
+2026-07-29 04:59:46 Train. loss_rec: 3.8553; loss_cl_pois: 2.4239; loss_cl_users: 0.0774; loss: 4.1054
+2026-07-29 04:59:49 Training finishes at this epoch. It takes 0.46826490163803103 min
+2026-07-29 04:59:49 Training loss: 4.1517
+2026-07-29 04:59:49 Training Epoch 13/30 results:
+2026-07-29 04:59:49 Recall@1: 1.0000
+2026-07-29 04:59:49 NDCG@1: 1.0000
+2026-07-29 04:59:49 Recall@5: 1.0000
+2026-07-29 04:59:49 NDCG@5: 1.0000
+2026-07-29 04:59:49 Recall@10: 1.0000
+2026-07-29 04:59:49 NDCG@10: 1.0000
+2026-07-29 04:59:49 Recall@20: 1.0000
+2026-07-29 04:59:49 NDCG@20: 1.0000
+2026-07-29 04:59:49 
+
+2026-07-29 04:59:49 Testing
+2026-07-29 04:59:49 Test. Batch 0/5
+2026-07-29 04:59:50 Test. loss_rec: 6.8693; loss_cl_pois: 2.9093; loss_cl_users: 0.3719; loss: 7.1975
+2026-07-29 04:59:50 Test. Batch 1/5
+2026-07-29 04:59:52 Test. loss_rec: 6.7601; loss_cl_pois: 2.9056; loss_cl_users: 0.3900; loss: 7.0897
+2026-07-29 04:59:52 Test. Batch 2/5
+2026-07-29 04:59:53 Test. loss_rec: 6.6470; loss_cl_pois: 2.9157; loss_cl_users: 0.5074; loss: 6.9893
+2026-07-29 04:59:53 Test. Batch 3/5
+2026-07-29 04:59:55 Test. loss_rec: 6.8038; loss_cl_pois: 2.9118; loss_cl_users: 0.3933; loss: 7.1343
+2026-07-29 04:59:55 Test. Batch 4/5
+2026-07-29 04:59:57 Test. loss_rec: 7.0475; loss_cl_pois: 2.9159; loss_cl_users: 0.0800; loss: 7.3471
+2026-07-29 04:59:57 Testing finishes
+2026-07-29 04:59:57 Testing loss: 7.151554012298584
+2026-07-29 04:59:57 Testing results:
+2026-07-29 04:59:57 Recall@1: 0.2592
+2026-07-29 04:59:57 NDCG@1: 0.2592
+2026-07-29 04:59:57 Recall@5: 0.3847
+2026-07-29 04:59:57 NDCG@5: 0.3243
+2026-07-29 04:59:57 Recall@10: 0.4215
+2026-07-29 04:59:57 NDCG@10: 0.3361
+2026-07-29 04:59:57 Recall@20: 0.4315
+2026-07-29 04:59:57 NDCG@20: 0.3386
+2026-07-29 04:59:57 ==================================
+
+
+2026-07-29 04:59:57 ================= Epoch 14/30 =================
+2026-07-29 04:59:57 Train. Batch 0/5
+2026-07-29 04:59:58 Train. loss_rec: 3.7792; loss_cl_pois: 2.4176; loss_cl_users: 0.5754; loss: 4.0785
+2026-07-29 05:00:00 Train. Batch 1/5
+2026-07-29 05:00:02 Train. loss_rec: 3.7828; loss_cl_pois: 2.4151; loss_cl_users: 0.4976; loss: 4.0740
+2026-07-29 05:00:04 Train. Batch 2/5
+2026-07-29 05:00:06 Train. loss_rec: 3.7959; loss_cl_pois: 2.4140; loss_cl_users: 0.5096; loss: 4.0883
+2026-07-29 05:00:07 Train. Batch 3/5
+2026-07-29 05:00:09 Train. loss_rec: 3.7601; loss_cl_pois: 2.4101; loss_cl_users: 0.6095; loss: 4.0620
+2026-07-29 05:00:11 Train. Batch 4/5
+2026-07-29 05:00:13 Train. loss_rec: 3.7715; loss_cl_pois: 2.4073; loss_cl_users: 0.2261; loss: 4.0348
+2026-07-29 05:00:15 Training finishes at this epoch. It takes 0.3058242917060852 min
+2026-07-29 05:00:15 Training loss: 4.0675
+2026-07-29 05:00:15 Training Epoch 14/30 results:
+2026-07-29 05:00:15 Recall@1: 1.0000
+2026-07-29 05:00:15 NDCG@1: 1.0000
+2026-07-29 05:00:15 Recall@5: 1.0000
+2026-07-29 05:00:15 NDCG@5: 1.0000
+2026-07-29 05:00:15 Recall@10: 1.0000
+2026-07-29 05:00:15 NDCG@10: 1.0000
+2026-07-29 05:00:15 Recall@20: 1.0000
+2026-07-29 05:00:15 NDCG@20: 1.0000
+2026-07-29 05:00:15 
+
+2026-07-29 05:00:15 Testing
+2026-07-29 05:00:15 Test. Batch 0/5
+2026-07-29 05:00:17 Test. loss_rec: 6.7817; loss_cl_pois: 2.9217; loss_cl_users: 0.4038; loss: 7.1143
+2026-07-29 05:00:17 Test. Batch 1/5
+2026-07-29 05:00:19 Test. loss_rec: 6.9707; loss_cl_pois: 2.9159; loss_cl_users: 0.4331; loss: 7.3056
+2026-07-29 05:00:19 Test. Batch 2/5
+2026-07-29 05:00:20 Test. loss_rec: 6.7002; loss_cl_pois: 2.9074; loss_cl_users: 0.4744; loss: 7.0384
+2026-07-29 05:00:21 Test. Batch 3/5
+2026-07-29 05:00:22 Test. loss_rec: 6.6770; loss_cl_pois: 2.9096; loss_cl_users: 0.4254; loss: 7.0105
+2026-07-29 05:00:22 Test. Batch 4/5
+2026-07-29 05:00:24 Test. loss_rec: 6.0925; loss_cl_pois: 2.9111; loss_cl_users: 0.1255; loss: 6.3962
+2026-07-29 05:00:24 Testing finishes
+2026-07-29 05:00:24 Testing loss: 6.97299165725708
+2026-07-29 05:00:24 Testing results:
+2026-07-29 05:00:24 Recall@1: 0.2954
+2026-07-29 05:00:24 NDCG@1: 0.2954
+2026-07-29 05:00:24 Recall@5: 0.4189
+2026-07-29 05:00:24 NDCG@5: 0.3603
+2026-07-29 05:00:24 Recall@10: 0.4419
+2026-07-29 05:00:24 NDCG@10: 0.3680
+2026-07-29 05:00:24 Recall@20: 0.4636
+2026-07-29 05:00:24 NDCG@20: 0.3738
+2026-07-29 05:00:24 Update test results and save model at epoch14
+2026-07-29 05:00:24 ==================================
+
+
+2026-07-29 05:00:24 ================= Epoch 15/30 =================
+2026-07-29 05:00:24 Train. Batch 0/5
+2026-07-29 05:00:26 Train. loss_rec: 3.7108; loss_cl_pois: 2.4181; loss_cl_users: 0.5679; loss: 4.0094
+2026-07-29 05:00:28 Train. Batch 1/5
+2026-07-29 05:00:30 Train. loss_rec: 3.7042; loss_cl_pois: 2.4188; loss_cl_users: 0.6109; loss: 4.0071
+2026-07-29 05:00:32 Train. Batch 2/5
+2026-07-29 05:00:33 Train. loss_rec: 3.6873; loss_cl_pois: 2.4144; loss_cl_users: 0.5162; loss: 3.9804
+2026-07-29 05:00:35 Train. Batch 3/5
+2026-07-29 05:00:37 Train. loss_rec: 3.6793; loss_cl_pois: 2.4228; loss_cl_users: 0.5914; loss: 3.9807
+2026-07-29 05:00:39 Train. Batch 4/5
+2026-07-29 05:00:41 Train. loss_rec: 3.6635; loss_cl_pois: 2.4203; loss_cl_users: 0.1158; loss: 3.9172
+2026-07-29 05:00:42 Training finishes at this epoch. It takes 0.3130899707476298 min
+2026-07-29 05:00:42 Training loss: 3.9790
+2026-07-29 05:00:42 Training Epoch 15/30 results:
+2026-07-29 05:00:42 Recall@1: 1.0000
+2026-07-29 05:00:42 NDCG@1: 1.0000
+2026-07-29 05:00:42 Recall@5: 1.0000
+2026-07-29 05:00:42 NDCG@5: 1.0000
+2026-07-29 05:00:42 Recall@10: 1.0000
+2026-07-29 05:00:42 NDCG@10: 1.0000
+2026-07-29 05:00:42 Recall@20: 1.0000
+2026-07-29 05:00:42 NDCG@20: 1.0000
+2026-07-29 05:00:42 
+
+2026-07-29 05:00:42 Testing
+2026-07-29 05:00:42 Test. Batch 0/5
+2026-07-29 05:00:44 Test. loss_rec: 6.6997; loss_cl_pois: 2.9196; loss_cl_users: 0.4503; loss: 7.0367
+2026-07-29 05:00:44 Test. Batch 1/5
+2026-07-29 05:00:45 Test. loss_rec: 6.6251; loss_cl_pois: 2.9290; loss_cl_users: 0.4898; loss: 6.9670
+2026-07-29 05:00:46 Test. Batch 2/5
+2026-07-29 05:00:47 Test. loss_rec: 6.9276; loss_cl_pois: 2.9219; loss_cl_users: 0.4434; loss: 7.2641
+2026-07-29 05:00:47 Test. Batch 3/5
+2026-07-29 05:00:48 Test. loss_rec: 6.7126; loss_cl_pois: 2.9202; loss_cl_users: 0.4402; loss: 7.0487
+2026-07-29 05:00:49 Test. Batch 4/5
+2026-07-29 05:00:50 Test. loss_rec: 6.6571; loss_cl_pois: 2.9225; loss_cl_users: 0.1483; loss: 6.9642
+2026-07-29 05:00:50 Testing finishes
+2026-07-29 05:00:50 Testing loss: 7.056128978729248
+2026-07-29 05:00:50 Testing results:
+2026-07-29 05:00:50 Recall@1: 0.2757
+2026-07-29 05:00:50 NDCG@1: 0.2757
+2026-07-29 05:00:50 Recall@5: 0.3925
+2026-07-29 05:00:50 NDCG@5: 0.3382
+2026-07-29 05:00:50 Recall@10: 0.4292
+2026-07-29 05:00:50 NDCG@10: 0.3507
+2026-07-29 05:00:50 Recall@20: 0.4402
+2026-07-29 05:00:50 NDCG@20: 0.3534
+2026-07-29 05:00:50 ==================================
+
+
+2026-07-29 05:00:50 ================= Epoch 16/30 =================
+2026-07-29 05:00:50 Train. Batch 0/5
+2026-07-29 05:00:52 Train. loss_rec: 3.6475; loss_cl_pois: 2.4155; loss_cl_users: 0.5467; loss: 3.9437
+2026-07-29 05:00:54 Train. Batch 1/5
+2026-07-29 05:00:56 Train. loss_rec: 3.6230; loss_cl_pois: 2.4255; loss_cl_users: 0.6173; loss: 3.9273
+2026-07-29 05:00:57 Train. Batch 2/5
+2026-07-29 05:00:59 Train. loss_rec: 3.6134; loss_cl_pois: 2.4215; loss_cl_users: 0.6153; loss: 3.9171
+2026-07-29 05:01:01 Train. Batch 3/5
+2026-07-29 05:01:03 Train. loss_rec: 3.5828; loss_cl_pois: 2.4322; loss_cl_users: 0.7041; loss: 3.8965
+2026-07-29 05:01:04 Train. Batch 4/5
+2026-07-29 05:01:06 Train. loss_rec: 3.5286; loss_cl_pois: 2.4273; loss_cl_users: 0.1728; loss: 3.7886
+2026-07-29 05:01:08 Training finishes at this epoch. It takes 0.2972402771313985 min
+2026-07-29 05:01:08 Training loss: 3.8946
+2026-07-29 05:01:08 Training Epoch 16/30 results:
+2026-07-29 05:01:08 Recall@1: 1.0000
+2026-07-29 05:01:08 NDCG@1: 1.0000
+2026-07-29 05:01:08 Recall@5: 1.0000
+2026-07-29 05:01:08 NDCG@5: 1.0000
+2026-07-29 05:01:08 Recall@10: 1.0000
+2026-07-29 05:01:08 NDCG@10: 1.0000
+2026-07-29 05:01:08 Recall@20: 1.0000
+2026-07-29 05:01:08 NDCG@20: 1.0000
+2026-07-29 05:01:08 
+
+2026-07-29 05:01:08 Testing
+2026-07-29 05:01:08 Test. Batch 0/5
+2026-07-29 05:01:09 Test. loss_rec: 6.4161; loss_cl_pois: 2.9227; loss_cl_users: 0.4630; loss: 6.7547
+2026-07-29 05:01:09 Test. Batch 1/5
+2026-07-29 05:01:11 Test. loss_rec: 6.7395; loss_cl_pois: 2.9221; loss_cl_users: 0.4243; loss: 7.0741
+2026-07-29 05:01:11 Test. Batch 2/5
+2026-07-29 05:01:12 Test. loss_rec: 6.9214; loss_cl_pois: 2.9204; loss_cl_users: 0.4543; loss: 7.2588
+2026-07-29 05:01:13 Test. Batch 3/5
+2026-07-29 05:01:14 Test. loss_rec: 6.9151; loss_cl_pois: 2.9126; loss_cl_users: 0.4558; loss: 7.2520
+2026-07-29 05:01:14 Test. Batch 4/5
+2026-07-29 05:01:16 Test. loss_rec: 5.8893; loss_cl_pois: 2.9195; loss_cl_users: 0.0858; loss: 6.1898
+2026-07-29 05:01:16 Testing finishes
+2026-07-29 05:01:16 Testing loss: 6.905888080596924
+2026-07-29 05:01:16 Testing results:
+2026-07-29 05:01:16 Recall@1: 0.2905
+2026-07-29 05:01:16 NDCG@1: 0.2905
+2026-07-29 05:01:16 Recall@5: 0.4345
+2026-07-29 05:01:16 NDCG@5: 0.3686
+2026-07-29 05:01:16 Recall@10: 0.4595
+2026-07-29 05:01:16 NDCG@10: 0.3768
+2026-07-29 05:01:16 Recall@20: 0.4685
+2026-07-29 05:01:16 NDCG@20: 0.3791
+2026-07-29 05:01:16 Update test results and save model at epoch16
+2026-07-29 05:01:16 ==================================
+
+
+2026-07-29 05:01:16 ================= Epoch 17/30 =================
+2026-07-29 05:01:16 Train. Batch 0/5
+2026-07-29 05:01:17 Train. loss_rec: 3.5586; loss_cl_pois: 2.4087; loss_cl_users: 0.5974; loss: 3.8592
+2026-07-29 05:01:19 Train. Batch 1/5
+2026-07-29 05:01:21 Train. loss_rec: 3.5576; loss_cl_pois: 2.4184; loss_cl_users: 0.6997; loss: 3.8694
+2026-07-29 05:01:23 Train. Batch 2/5
+2026-07-29 05:01:25 Train. loss_rec: 3.5488; loss_cl_pois: 2.4211; loss_cl_users: 0.7182; loss: 3.8627
+2026-07-29 05:01:27 Train. Batch 3/5
+2026-07-29 05:01:29 Train. loss_rec: 3.5107; loss_cl_pois: 2.4173; loss_cl_users: 0.6615; loss: 3.8186
+2026-07-29 05:01:31 Train. Batch 4/5
+2026-07-29 05:01:33 Train. loss_rec: 3.5010; loss_cl_pois: 2.4159; loss_cl_users: 0.0737; loss: 3.7500
+2026-07-29 05:01:34 Training finishes at this epoch. It takes 0.3103599826494853 min
+2026-07-29 05:01:34 Training loss: 3.8320
+2026-07-29 05:01:34 Training Epoch 17/30 results:
+2026-07-29 05:01:34 Recall@1: 1.0000
+2026-07-29 05:01:34 NDCG@1: 1.0000
+2026-07-29 05:01:34 Recall@5: 1.0000
+2026-07-29 05:01:34 NDCG@5: 1.0000
+2026-07-29 05:01:34 Recall@10: 1.0000
+2026-07-29 05:01:34 NDCG@10: 1.0000
+2026-07-29 05:01:34 Recall@20: 1.0000
+2026-07-29 05:01:34 NDCG@20: 1.0000
+2026-07-29 05:01:34 
+
+2026-07-29 05:01:34 Testing
+2026-07-29 05:01:34 Test. Batch 0/5
+2026-07-29 05:01:36 Test. loss_rec: 6.5099; loss_cl_pois: 2.9188; loss_cl_users: 0.5004; loss: 6.8518
+2026-07-29 05:01:36 Test. Batch 1/5
+2026-07-29 05:01:37 Test. loss_rec: 6.6132; loss_cl_pois: 2.9237; loss_cl_users: 0.5123; loss: 6.9568
+2026-07-29 05:01:37 Test. Batch 2/5
+2026-07-29 05:01:39 Test. loss_rec: 6.8069; loss_cl_pois: 2.9159; loss_cl_users: 0.4155; loss: 7.1400
+2026-07-29 05:01:39 Test. Batch 3/5
+2026-07-29 05:01:40 Test. loss_rec: 6.7846; loss_cl_pois: 2.9339; loss_cl_users: 0.4975; loss: 7.1277
+2026-07-29 05:01:40 Test. Batch 4/5
+2026-07-29 05:01:41 Test. loss_rec: 7.0319; loss_cl_pois: 2.9220; loss_cl_users: 0.0816; loss: 7.3322
+2026-07-29 05:01:42 Testing finishes
+2026-07-29 05:01:42 Testing loss: 7.081719017028808
+2026-07-29 05:01:42 Testing results:
+2026-07-29 05:01:42 Recall@1: 0.2386
+2026-07-29 05:01:42 NDCG@1: 0.2386
+2026-07-29 05:01:42 Recall@5: 0.3926
+2026-07-29 05:01:42 NDCG@5: 0.3214
+2026-07-29 05:01:42 Recall@10: 0.4165
+2026-07-29 05:01:42 NDCG@10: 0.3292
+2026-07-29 05:01:42 Recall@20: 0.4305
+2026-07-29 05:01:42 NDCG@20: 0.3328
+2026-07-29 05:01:42 ==================================
+
+
+2026-07-29 05:01:42 ================= Epoch 18/30 =================
+2026-07-29 05:01:42 Train. Batch 0/5
+2026-07-29 05:01:43 Train. loss_rec: 3.4770; loss_cl_pois: 2.4216; loss_cl_users: 0.6515; loss: 3.7843
+2026-07-29 05:01:45 Train. Batch 1/5
+2026-07-29 05:01:47 Train. loss_rec: 3.4917; loss_cl_pois: 2.4269; loss_cl_users: 0.7340; loss: 3.8078
+2026-07-29 05:01:48 Train. Batch 2/5
+2026-07-29 05:01:50 Train. loss_rec: 3.4419; loss_cl_pois: 2.4213; loss_cl_users: 0.7077; loss: 3.7548
+2026-07-29 05:01:52 Train. Batch 3/5
+2026-07-29 05:01:54 Train. loss_rec: 3.4851; loss_cl_pois: 2.4244; loss_cl_users: 0.8693; loss: 3.8145
+2026-07-29 05:01:56 Train. Batch 4/5
+2026-07-29 05:01:58 Train. loss_rec: 3.4274; loss_cl_pois: 2.4137; loss_cl_users: 0.0873; loss: 3.6775
+2026-07-29 05:02:00 Training finishes at this epoch. It takes 0.3064279039700826 min
+2026-07-29 05:02:00 Training loss: 3.7678
+2026-07-29 05:02:00 Training Epoch 18/30 results:
+2026-07-29 05:02:00 Recall@1: 1.0000
+2026-07-29 05:02:00 NDCG@1: 1.0000
+2026-07-29 05:02:00 Recall@5: 1.0000
+2026-07-29 05:02:00 NDCG@5: 1.0000
+2026-07-29 05:02:00 Recall@10: 1.0000
+2026-07-29 05:02:00 NDCG@10: 1.0000
+2026-07-29 05:02:00 Recall@20: 1.0000
+2026-07-29 05:02:00 NDCG@20: 1.0000
+2026-07-29 05:02:00 
+
+2026-07-29 05:02:00 Testing
+2026-07-29 05:02:00 Test. Batch 0/5
+2026-07-29 05:02:02 Test. loss_rec: 6.6494; loss_cl_pois: 2.9268; loss_cl_users: 0.4893; loss: 6.9910
+2026-07-29 05:02:02 Test. Batch 1/5
+2026-07-29 05:02:04 Test. loss_rec: 6.5019; loss_cl_pois: 2.9246; loss_cl_users: 0.4980; loss: 6.8442
+2026-07-29 05:02:04 Test. Batch 2/5
+2026-07-29 05:02:06 Test. loss_rec: 6.7174; loss_cl_pois: 2.9260; loss_cl_users: 0.4965; loss: 7.0596
+2026-07-29 05:02:06 Test. Batch 3/5
+2026-07-29 05:02:08 Test. loss_rec: 6.7936; loss_cl_pois: 2.9205; loss_cl_users: 0.4068; loss: 7.1264
+2026-07-29 05:02:09 Test. Batch 4/5
+2026-07-29 05:02:11 Test. loss_rec: 6.8035; loss_cl_pois: 2.9350; loss_cl_users: 0.1152; loss: 7.1085
+2026-07-29 05:02:11 Testing finishes
+2026-07-29 05:02:11 Testing loss: 7.025933456420899
+2026-07-29 05:02:11 Testing results:
+2026-07-29 05:02:11 Recall@1: 0.2691
+2026-07-29 05:02:11 NDCG@1: 0.2691
+2026-07-29 05:02:11 Recall@5: 0.3846
+2026-07-29 05:02:11 NDCG@5: 0.3308
+2026-07-29 05:02:11 Recall@10: 0.4264
+2026-07-29 05:02:11 NDCG@10: 0.3444
+2026-07-29 05:02:11 Recall@20: 0.4354
+2026-07-29 05:02:11 NDCG@20: 0.3466
+2026-07-29 05:02:11 ==================================
+
+
+2026-07-29 05:02:11 ================= Epoch 19/30 =================
+2026-07-29 05:02:11 Train. Batch 0/5
+2026-07-29 05:02:14 Train. loss_rec: 3.4105; loss_cl_pois: 2.4154; loss_cl_users: 0.7337; loss: 3.7254
+2026-07-29 05:02:17 Train. Batch 1/5
+2026-07-29 05:02:19 Train. loss_rec: 3.4261; loss_cl_pois: 2.4086; loss_cl_users: 0.7582; loss: 3.7428
+2026-07-29 05:02:22 Train. Batch 2/5
+2026-07-29 05:02:24 Train. loss_rec: 3.4163; loss_cl_pois: 2.4187; loss_cl_users: 0.6547; loss: 3.7236
+2026-07-29 05:02:27 Train. Batch 3/5
+2026-07-29 05:02:29 Train. loss_rec: 3.3955; loss_cl_pois: 2.4163; loss_cl_users: 0.7931; loss: 3.7164
+2026-07-29 05:02:32 Train. Batch 4/5
+2026-07-29 05:02:35 Train. loss_rec: 3.3821; loss_cl_pois: 2.4211; loss_cl_users: 0.1158; loss: 3.6358
+2026-07-29 05:02:37 Training finishes at this epoch. It takes 0.442673389116923 min
+2026-07-29 05:02:37 Training loss: 3.7088
+2026-07-29 05:02:37 Training Epoch 19/30 results:
+2026-07-29 05:02:37 Recall@1: 1.0000
+2026-07-29 05:02:37 NDCG@1: 1.0000
+2026-07-29 05:02:37 Recall@5: 1.0000
+2026-07-29 05:02:37 NDCG@5: 1.0000
+2026-07-29 05:02:37 Recall@10: 1.0000
+2026-07-29 05:02:37 NDCG@10: 1.0000
+2026-07-29 05:02:37 Recall@20: 1.0000
+2026-07-29 05:02:37 NDCG@20: 1.0000
+2026-07-29 05:02:37 
+
+2026-07-29 05:02:37 Testing
+2026-07-29 05:02:37 Test. Batch 0/5
+2026-07-29 05:02:40 Test. loss_rec: 6.7447; loss_cl_pois: 2.9332; loss_cl_users: 0.4604; loss: 7.0841
+2026-07-29 05:02:40 Test. Batch 1/5
+2026-07-29 05:02:42 Test. loss_rec: 6.6093; loss_cl_pois: 2.9319; loss_cl_users: 0.5269; loss: 6.9552
+2026-07-29 05:02:42 Test. Batch 2/5
+2026-07-29 05:02:44 Test. loss_rec: 6.5559; loss_cl_pois: 2.9281; loss_cl_users: 0.4992; loss: 6.8986
+2026-07-29 05:02:44 Test. Batch 3/5
+2026-07-29 05:02:46 Test. loss_rec: 6.7163; loss_cl_pois: 2.9388; loss_cl_users: 0.4783; loss: 7.0580
+2026-07-29 05:02:46 Test. Batch 4/5
+2026-07-29 05:02:48 Test. loss_rec: 6.6122; loss_cl_pois: 2.9316; loss_cl_users: 0.1308; loss: 6.9185
+2026-07-29 05:02:49 Testing finishes
+2026-07-29 05:02:49 Testing loss: 6.982864665985107
+2026-07-29 05:02:49 Testing results:
+2026-07-29 05:02:49 Recall@1: 0.2572
+2026-07-29 05:02:49 NDCG@1: 0.2572
+2026-07-29 05:02:49 Recall@5: 0.4071
+2026-07-29 05:02:49 NDCG@5: 0.3389
+2026-07-29 05:02:49 Recall@10: 0.4331
+2026-07-29 05:02:49 NDCG@10: 0.3475
+2026-07-29 05:02:49 Recall@20: 0.4461
+2026-07-29 05:02:49 NDCG@20: 0.3508
+2026-07-29 05:02:49 ==================================
+
+
+2026-07-29 05:02:49 ================= Epoch 20/30 =================
+2026-07-29 05:02:49 Train. Batch 0/5
+2026-07-29 05:02:51 Train. loss_rec: 3.3520; loss_cl_pois: 2.4308; loss_cl_users: 0.7568; loss: 3.6708
+2026-07-29 05:02:54 Train. Batch 1/5
+2026-07-29 05:02:56 Train. loss_rec: 3.3444; loss_cl_pois: 2.4298; loss_cl_users: 0.7790; loss: 3.6652
+2026-07-29 05:02:59 Train. Batch 2/5
+2026-07-29 05:03:01 Train. loss_rec: 3.3341; loss_cl_pois: 2.4247; loss_cl_users: 0.7864; loss: 3.6553
+2026-07-29 05:03:04 Train. Batch 3/5
+2026-07-29 05:03:06 Train. loss_rec: 3.3377; loss_cl_pois: 2.4192; loss_cl_users: 0.7839; loss: 3.6580
+2026-07-29 05:03:09 Train. Batch 4/5
+2026-07-29 05:03:12 Train. loss_rec: 3.3447; loss_cl_pois: 2.4098; loss_cl_users: 0.2720; loss: 3.6128
+2026-07-29 05:03:14 Training finishes at this epoch. It takes 0.42669905026753746 min
+2026-07-29 05:03:14 Training loss: 3.6524
+2026-07-29 05:03:14 Training Epoch 20/30 results:
+2026-07-29 05:03:14 Recall@1: 1.0000
+2026-07-29 05:03:14 NDCG@1: 1.0000
+2026-07-29 05:03:14 Recall@5: 1.0000
+2026-07-29 05:03:14 NDCG@5: 1.0000
+2026-07-29 05:03:14 Recall@10: 1.0000
+2026-07-29 05:03:14 NDCG@10: 1.0000
+2026-07-29 05:03:14 Recall@20: 1.0000
+2026-07-29 05:03:14 NDCG@20: 1.0000
+2026-07-29 05:03:14 
+
+2026-07-29 05:03:14 Testing
+2026-07-29 05:03:14 Test. Batch 0/5
+2026-07-29 05:03:16 Test. loss_rec: 6.8123; loss_cl_pois: 2.9233; loss_cl_users: 0.5204; loss: 7.1567
+2026-07-29 05:03:16 Test. Batch 1/5
+2026-07-29 05:03:17 Test. loss_rec: 6.5352; loss_cl_pois: 2.9217; loss_cl_users: 0.5192; loss: 6.8793
+2026-07-29 05:03:17 Test. Batch 2/5
+2026-07-29 05:03:19 Test. loss_rec: 6.6102; loss_cl_pois: 2.9377; loss_cl_users: 0.4924; loss: 6.9533
+2026-07-29 05:03:19 Test. Batch 3/5
+2026-07-29 05:03:20 Test. loss_rec: 6.5987; loss_cl_pois: 2.9282; loss_cl_users: 0.5076; loss: 6.9423
+2026-07-29 05:03:20 Test. Batch 4/5
+2026-07-29 05:03:22 Test. loss_rec: 6.5812; loss_cl_pois: 2.9264; loss_cl_users: 0.0597; loss: 6.8798
+2026-07-29 05:03:22 Testing finishes
+2026-07-29 05:03:22 Testing loss: 6.96226806640625
+2026-07-29 05:03:22 Testing results:
+2026-07-29 05:03:22 Recall@1: 0.2817
+2026-07-29 05:03:22 NDCG@1: 0.2817
+2026-07-29 05:03:22 Recall@5: 0.4012
+2026-07-29 05:03:22 NDCG@5: 0.3446
+2026-07-29 05:03:22 Recall@10: 0.4380
+2026-07-29 05:03:22 NDCG@10: 0.3564
+2026-07-29 05:03:22 Recall@20: 0.4490
+2026-07-29 05:03:22 NDCG@20: 0.3591
+2026-07-29 05:03:22 ==================================
+
+
+2026-07-29 05:03:22 ================= Epoch 21/30 =================
+2026-07-29 05:03:22 Train. Batch 0/5
+2026-07-29 05:03:24 Train. loss_rec: 3.3097; loss_cl_pois: 2.4175; loss_cl_users: 0.7500; loss: 3.6265
+2026-07-29 05:03:27 Train. Batch 1/5
+2026-07-29 05:03:30 Train. loss_rec: 3.2802; loss_cl_pois: 2.4040; loss_cl_users: 0.6599; loss: 3.5866
+2026-07-29 05:03:33 Train. Batch 2/5
+2026-07-29 05:03:36 Train. loss_rec: 3.2793; loss_cl_pois: 2.4244; loss_cl_users: 0.8030; loss: 3.6020
+2026-07-29 05:03:38 Train. Batch 3/5
+2026-07-29 05:03:41 Train. loss_rec: 3.2667; loss_cl_pois: 2.4105; loss_cl_users: 0.8553; loss: 3.5933
+2026-07-29 05:03:44 Train. Batch 4/5
+2026-07-29 05:03:46 Train. loss_rec: 3.2618; loss_cl_pois: 2.4198; loss_cl_users: 0.1279; loss: 3.5166
+2026-07-29 05:03:49 Training finishes at this epoch. It takes 0.4499007662137349 min
+2026-07-29 05:03:49 Training loss: 3.5850
+2026-07-29 05:03:49 Training Epoch 21/30 results:
+2026-07-29 05:03:49 Recall@1: 0.9990
+2026-07-29 05:03:49 NDCG@1: 0.9990
+2026-07-29 05:03:49 Recall@5: 1.0000
+2026-07-29 05:03:49 NDCG@5: 0.9996
+2026-07-29 05:03:49 Recall@10: 1.0000
+2026-07-29 05:03:49 NDCG@10: 0.9996
+2026-07-29 05:03:49 Recall@20: 1.0000
+2026-07-29 05:03:49 NDCG@20: 0.9996
+2026-07-29 05:03:49 
+
+2026-07-29 05:03:49 Testing
+2026-07-29 05:03:49 Test. Batch 0/5
+2026-07-29 05:03:51 Test. loss_rec: 6.6368; loss_cl_pois: 2.9450; loss_cl_users: 0.5093; loss: 6.9823
+2026-07-29 05:03:51 Test. Batch 1/5
+2026-07-29 05:03:53 Test. loss_rec: 6.5348; loss_cl_pois: 2.9395; loss_cl_users: 0.5209; loss: 6.8808
+2026-07-29 05:03:54 Test. Batch 2/5
+2026-07-29 05:03:56 Test. loss_rec: 6.7569; loss_cl_pois: 2.9460; loss_cl_users: 0.5215; loss: 7.1036
+2026-07-29 05:03:56 Test. Batch 3/5
+2026-07-29 05:03:58 Test. loss_rec: 6.6261; loss_cl_pois: 2.9386; loss_cl_users: 0.5325; loss: 6.9732
+2026-07-29 05:03:58 Test. Batch 4/5
+2026-07-29 05:04:00 Test. loss_rec: 5.9861; loss_cl_pois: 2.9420; loss_cl_users: 0.1373; loss: 6.2940
+2026-07-29 05:04:00 Testing finishes
+2026-07-29 05:04:00 Testing loss: 6.84678544998169
+2026-07-29 05:04:00 Testing results:
+2026-07-29 05:04:00 Recall@1: 0.2915
+2026-07-29 05:04:00 NDCG@1: 0.2915
+2026-07-29 05:04:00 Recall@5: 0.4110
+2026-07-29 05:04:00 NDCG@5: 0.3562
+2026-07-29 05:04:00 Recall@10: 0.4429
+2026-07-29 05:04:00 NDCG@10: 0.3669
+2026-07-29 05:04:00 Recall@20: 0.4509
+2026-07-29 05:04:00 NDCG@20: 0.3690
+2026-07-29 05:04:00 ==================================
+
+
+2026-07-29 05:04:00 ================= Epoch 22/30 =================
+2026-07-29 05:04:00 Train. Batch 0/5
+2026-07-29 05:04:02 Train. loss_rec: 3.2475; loss_cl_pois: 2.4212; loss_cl_users: 0.7545; loss: 3.5651
+2026-07-29 05:04:05 Train. Batch 1/5
+2026-07-29 05:04:07 Train. loss_rec: 3.2304; loss_cl_pois: 2.4273; loss_cl_users: 0.8380; loss: 3.5569
+2026-07-29 05:04:10 Train. Batch 2/5
+2026-07-29 05:04:12 Train. loss_rec: 3.2074; loss_cl_pois: 2.4193; loss_cl_users: 0.8299; loss: 3.5323
+2026-07-29 05:04:15 Train. Batch 3/5
+2026-07-29 05:04:17 Train. loss_rec: 3.2230; loss_cl_pois: 2.4182; loss_cl_users: 0.7222; loss: 3.5371
+2026-07-29 05:04:20 Train. Batch 4/5
+2026-07-29 05:04:22 Train. loss_rec: 3.2045; loss_cl_pois: 2.4144; loss_cl_users: 0.1228; loss: 3.4582
+2026-07-29 05:04:25 Training finishes at this epoch. It takes 0.41793572902679443 min
+2026-07-29 05:04:25 Training loss: 3.5299
+2026-07-29 05:04:25 Training Epoch 22/30 results:
+2026-07-29 05:04:25 Recall@1: 1.0000
+2026-07-29 05:04:25 NDCG@1: 1.0000
+2026-07-29 05:04:25 Recall@5: 1.0000
+2026-07-29 05:04:25 NDCG@5: 1.0000
+2026-07-29 05:04:25 Recall@10: 1.0000
+2026-07-29 05:04:25 NDCG@10: 1.0000
+2026-07-29 05:04:25 Recall@20: 1.0000
+2026-07-29 05:04:25 NDCG@20: 1.0000
+2026-07-29 05:04:25 
+
+2026-07-29 05:04:25 Testing
+2026-07-29 05:04:25 Test. Batch 0/5
+2026-07-29 05:04:27 Test. loss_rec: 6.4708; loss_cl_pois: 2.9334; loss_cl_users: 0.5795; loss: 6.8221
+2026-07-29 05:04:27 Test. Batch 1/5
+2026-07-29 05:04:29 Test. loss_rec: 6.8846; loss_cl_pois: 2.9321; loss_cl_users: 0.5119; loss: 7.2290
+2026-07-29 05:04:29 Test. Batch 2/5
+2026-07-29 05:04:31 Test. loss_rec: 6.3072; loss_cl_pois: 2.9345; loss_cl_users: 0.5702; loss: 6.6577
+2026-07-29 05:04:31 Test. Batch 3/5
+2026-07-29 05:04:33 Test. loss_rec: 6.7727; loss_cl_pois: 2.9365; loss_cl_users: 0.4916; loss: 7.1156
+2026-07-29 05:04:34 Test. Batch 4/5
+2026-07-29 05:04:36 Test. loss_rec: 6.4271; loss_cl_pois: 2.9505; loss_cl_users: 0.0809; loss: 6.7302
+2026-07-29 05:04:36 Testing finishes
+2026-07-29 05:04:36 Testing loss: 6.910900020599366
+2026-07-29 05:04:36 Testing results:
+2026-07-29 05:04:36 Recall@1: 0.2758
+2026-07-29 05:04:36 NDCG@1: 0.2758
+2026-07-29 05:04:36 Recall@5: 0.3915
+2026-07-29 05:04:36 NDCG@5: 0.3381
+2026-07-29 05:04:36 Recall@10: 0.4224
+2026-07-29 05:04:36 NDCG@10: 0.3480
+2026-07-29 05:04:36 Recall@20: 0.4352
+2026-07-29 05:04:36 NDCG@20: 0.3515
+2026-07-29 05:04:36 ==================================
+
+
+2026-07-29 05:04:36 ================= Epoch 23/30 =================
+2026-07-29 05:04:36 Train. Batch 0/5
+2026-07-29 05:04:38 Train. loss_rec: 3.1869; loss_cl_pois: 2.4178; loss_cl_users: 0.8638; loss: 3.5151
+2026-07-29 05:04:41 Train. Batch 1/5
+2026-07-29 05:04:43 Train. loss_rec: 3.1847; loss_cl_pois: 2.4230; loss_cl_users: 0.8048; loss: 3.5075
+2026-07-29 05:04:46 Train. Batch 2/5
+2026-07-29 05:04:48 Train. loss_rec: 3.1661; loss_cl_pois: 2.4174; loss_cl_users: 0.7188; loss: 3.4797
+2026-07-29 05:04:51 Train. Batch 3/5
+2026-07-29 05:04:54 Train. loss_rec: 3.1649; loss_cl_pois: 2.4125; loss_cl_users: 0.7839; loss: 3.4846
+2026-07-29 05:04:56 Train. Batch 4/5
+2026-07-29 05:04:59 Train. loss_rec: 3.1054; loss_cl_pois: 2.4317; loss_cl_users: 0.2910; loss: 3.3777
+2026-07-29 05:05:01 Training finishes at this epoch. It takes 0.42594607671101886 min
+2026-07-29 05:05:01 Training loss: 3.4729
+2026-07-29 05:05:01 Training Epoch 23/30 results:
+2026-07-29 05:05:01 Recall@1: 0.9990
+2026-07-29 05:05:01 NDCG@1: 0.9990
+2026-07-29 05:05:01 Recall@5: 1.0000
+2026-07-29 05:05:01 NDCG@5: 0.9996
+2026-07-29 05:05:01 Recall@10: 1.0000
+2026-07-29 05:05:01 NDCG@10: 0.9996
+2026-07-29 05:05:01 Recall@20: 1.0000
+2026-07-29 05:05:01 NDCG@20: 0.9996
+2026-07-29 05:05:01 
+
+2026-07-29 05:05:01 Testing
+2026-07-29 05:05:01 Test. Batch 0/5
+2026-07-29 05:05:04 Test. loss_rec: 6.6474; loss_cl_pois: 2.9526; loss_cl_users: 0.5918; loss: 7.0018
+2026-07-29 05:05:04 Test. Batch 1/5
+2026-07-29 05:05:06 Test. loss_rec: 6.5391; loss_cl_pois: 2.9468; loss_cl_users: 0.5134; loss: 6.8851
+2026-07-29 05:05:06 Test. Batch 2/5
+2026-07-29 05:05:08 Test. loss_rec: 6.6264; loss_cl_pois: 2.9567; loss_cl_users: 0.5503; loss: 6.9771
+2026-07-29 05:05:08 Test. Batch 3/5
+2026-07-29 05:05:10 Test. loss_rec: 6.5852; loss_cl_pois: 2.9427; loss_cl_users: 0.5153; loss: 6.9310
+2026-07-29 05:05:10 Test. Batch 4/5
+2026-07-29 05:05:12 Test. loss_rec: 6.3585; loss_cl_pois: 2.9461; loss_cl_users: 0.1486; loss: 6.6680
+2026-07-29 05:05:12 Testing finishes
+2026-07-29 05:05:12 Testing loss: 6.892593002319336
+2026-07-29 05:05:12 Testing results:
+2026-07-29 05:05:12 Recall@1: 0.2798
+2026-07-29 05:05:12 NDCG@1: 0.2798
+2026-07-29 05:05:12 Recall@5: 0.4090
+2026-07-29 05:05:12 NDCG@5: 0.3484
+2026-07-29 05:05:12 Recall@10: 0.4369
+2026-07-29 05:05:12 NDCG@10: 0.3578
+2026-07-29 05:05:12 Recall@20: 0.4509
+2026-07-29 05:05:12 NDCG@20: 0.3616
+2026-07-29 05:05:12 ==================================
+
+
+2026-07-29 05:05:12 ================= Epoch 24/30 =================
+2026-07-29 05:05:12 Train. Batch 0/5
+2026-07-29 05:05:15 Train. loss_rec: 3.1248; loss_cl_pois: 2.4239; loss_cl_users: 0.9477; loss: 3.4619
+2026-07-29 05:05:17 Train. Batch 1/5
+2026-07-29 05:05:20 Train. loss_rec: 3.1211; loss_cl_pois: 2.4424; loss_cl_users: 0.8603; loss: 3.4514
+2026-07-29 05:05:22 Train. Batch 2/5
+2026-07-29 05:05:25 Train. loss_rec: 3.1059; loss_cl_pois: 2.4255; loss_cl_users: 0.8749; loss: 3.4360
+2026-07-29 05:05:27 Train. Batch 3/5
+2026-07-29 05:05:30 Train. loss_rec: 3.1043; loss_cl_pois: 2.4139; loss_cl_users: 0.8700; loss: 3.4327
+2026-07-29 05:05:32 Train. Batch 4/5
+2026-07-29 05:05:35 Train. loss_rec: 3.1066; loss_cl_pois: 2.4130; loss_cl_users: 0.0903; loss: 3.3569
+2026-07-29 05:05:37 Training finishes at this epoch. It takes 0.4131998578707377 min
+2026-07-29 05:05:37 Training loss: 3.4278
+2026-07-29 05:05:37 Training Epoch 24/30 results:
+2026-07-29 05:05:37 Recall@1: 0.9990
+2026-07-29 05:05:37 NDCG@1: 0.9990
+2026-07-29 05:05:37 Recall@5: 1.0000
+2026-07-29 05:05:37 NDCG@5: 0.9996
+2026-07-29 05:05:37 Recall@10: 1.0000
+2026-07-29 05:05:37 NDCG@10: 0.9996
+2026-07-29 05:05:37 Recall@20: 1.0000
+2026-07-29 05:05:37 NDCG@20: 0.9996
+2026-07-29 05:05:37 
+
+2026-07-29 05:05:37 Testing
+2026-07-29 05:05:37 Test. Batch 0/5
+2026-07-29 05:05:39 Test. loss_rec: 6.3975; loss_cl_pois: 2.9342; loss_cl_users: 0.5726; loss: 6.7481
+2026-07-29 05:05:39 Test. Batch 1/5
+2026-07-29 05:05:42 Test. loss_rec: 6.5072; loss_cl_pois: 2.9458; loss_cl_users: 0.4456; loss: 6.8464
+2026-07-29 05:05:42 Test. Batch 2/5
+2026-07-29 05:05:44 Test. loss_rec: 6.5943; loss_cl_pois: 2.9297; loss_cl_users: 0.5532; loss: 6.9426
+2026-07-29 05:05:44 Test. Batch 3/5
+2026-07-29 05:05:46 Test. loss_rec: 6.6685; loss_cl_pois: 2.9458; loss_cl_users: 0.5666; loss: 7.0197
+2026-07-29 05:05:46 Test. Batch 4/5
+2026-07-29 05:05:48 Test. loss_rec: 7.3269; loss_cl_pois: 2.9435; loss_cl_users: 0.0961; loss: 7.6308
+2026-07-29 05:05:48 Testing finishes
+2026-07-29 05:05:48 Testing loss: 7.037525177001953
+2026-07-29 05:05:48 Testing results:
+2026-07-29 05:05:48 Recall@1: 0.2485
+2026-07-29 05:05:48 NDCG@1: 0.2485
+2026-07-29 05:05:48 Recall@5: 0.3699
+2026-07-29 05:05:48 NDCG@5: 0.3143
+2026-07-29 05:05:48 Recall@10: 0.3979
+2026-07-29 05:05:48 NDCG@10: 0.3236
+2026-07-29 05:05:48 Recall@20: 0.4069
+2026-07-29 05:05:48 NDCG@20: 0.3259
+2026-07-29 05:05:48 ==================================
+
+
+2026-07-29 05:05:48 ================= Epoch 25/30 =================
+2026-07-29 05:05:48 Train. Batch 0/5
+2026-07-29 05:05:50 Train. loss_rec: 3.0755; loss_cl_pois: 2.4189; loss_cl_users: 0.7529; loss: 3.3927
+2026-07-29 05:05:53 Train. Batch 1/5
+2026-07-29 05:05:55 Train. loss_rec: 3.0754; loss_cl_pois: 2.4347; loss_cl_users: 0.7602; loss: 3.3949
+2026-07-29 05:05:58 Train. Batch 2/5
+2026-07-29 05:06:01 Train. loss_rec: 3.0705; loss_cl_pois: 2.4180; loss_cl_users: 0.9098; loss: 3.4032
+2026-07-29 05:06:03 Train. Batch 3/5
+2026-07-29 05:06:06 Train. loss_rec: 3.0686; loss_cl_pois: 2.4267; loss_cl_users: 1.0637; loss: 3.4176
+2026-07-29 05:06:08 Train. Batch 4/5
+2026-07-29 05:06:11 Train. loss_rec: 3.0436; loss_cl_pois: 2.4111; loss_cl_users: 0.1226; loss: 3.2969
+2026-07-29 05:06:13 Training finishes at this epoch. It takes 0.4176315108935038 min
+2026-07-29 05:06:13 Training loss: 3.3811
+2026-07-29 05:06:13 Training Epoch 25/30 results:
+2026-07-29 05:06:13 Recall@1: 1.0000
+2026-07-29 05:06:13 NDCG@1: 1.0000
+2026-07-29 05:06:13 Recall@5: 1.0000
+2026-07-29 05:06:13 NDCG@5: 1.0000
+2026-07-29 05:06:13 Recall@10: 1.0000
+2026-07-29 05:06:13 NDCG@10: 1.0000
+2026-07-29 05:06:13 Recall@20: 1.0000
+2026-07-29 05:06:13 NDCG@20: 1.0000
+2026-07-29 05:06:13 
+
+2026-07-29 05:06:13 Testing
+2026-07-29 05:06:13 Test. Batch 0/5
+2026-07-29 05:06:15 Test. loss_rec: 6.4566; loss_cl_pois: 2.9529; loss_cl_users: 0.6073; loss: 6.8127
+2026-07-29 05:06:15 Test. Batch 1/5
+2026-07-29 05:06:17 Test. loss_rec: 6.3481; loss_cl_pois: 2.9524; loss_cl_users: 0.5551; loss: 6.6989
+2026-07-29 05:06:18 Test. Batch 2/5
+2026-07-29 05:06:19 Test. loss_rec: 6.8261; loss_cl_pois: 2.9332; loss_cl_users: 0.5251; loss: 7.1719
+2026-07-29 05:06:20 Test. Batch 3/5
+2026-07-29 05:06:22 Test. loss_rec: 6.5456; loss_cl_pois: 2.9455; loss_cl_users: 0.4911; loss: 6.8892
+2026-07-29 05:06:22 Test. Batch 4/5
+2026-07-29 05:06:24 Test. loss_rec: 6.9699; loss_cl_pois: 2.9520; loss_cl_users: 0.0873; loss: 7.2738
+2026-07-29 05:06:25 Testing finishes
+2026-07-29 05:06:25 Testing loss: 6.9693066596984865
+2026-07-29 05:06:25 Testing results:
+2026-07-29 05:06:25 Recall@1: 0.2758
+2026-07-29 05:06:25 NDCG@1: 0.2758
+2026-07-29 05:06:25 Recall@5: 0.3797
+2026-07-29 05:06:25 NDCG@5: 0.3305
+2026-07-29 05:06:25 Recall@10: 0.4067
+2026-07-29 05:06:25 NDCG@10: 0.3395
+2026-07-29 05:06:25 Recall@20: 0.4187
+2026-07-29 05:06:25 NDCG@20: 0.3425
+2026-07-29 05:06:25 ==================================
+
+
+2026-07-29 05:06:25 ================= Epoch 26/30 =================
+2026-07-29 05:06:25 Train. Batch 0/5
+2026-07-29 05:06:27 Train. loss_rec: 3.0284; loss_cl_pois: 2.4112; loss_cl_users: 0.6796; loss: 3.3375
+2026-07-29 05:06:30 Train. Batch 1/5
+2026-07-29 05:06:33 Train. loss_rec: 3.0160; loss_cl_pois: 2.4160; loss_cl_users: 0.9743; loss: 3.3551
+2026-07-29 05:06:36 Train. Batch 2/5
+2026-07-29 05:06:37 Train. loss_rec: 3.0169; loss_cl_pois: 2.4109; loss_cl_users: 0.7267; loss: 3.3307
+2026-07-29 05:06:39 Train. Batch 3/5
+2026-07-29 05:06:41 Train. loss_rec: 3.0122; loss_cl_pois: 2.4167; loss_cl_users: 1.0041; loss: 3.3543
+2026-07-29 05:06:43 Train. Batch 4/5
+2026-07-29 05:06:44 Train. loss_rec: 2.9802; loss_cl_pois: 2.4175; loss_cl_users: 0.2113; loss: 3.2430
+2026-07-29 05:06:46 Training finishes at this epoch. It takes 0.3603428284327189 min
+2026-07-29 05:06:46 Training loss: 3.3241
+2026-07-29 05:06:46 Training Epoch 26/30 results:
+2026-07-29 05:06:46 Recall@1: 1.0000
+2026-07-29 05:06:46 NDCG@1: 1.0000
+2026-07-29 05:06:46 Recall@5: 1.0000
+2026-07-29 05:06:46 NDCG@5: 1.0000
+2026-07-29 05:06:46 Recall@10: 1.0000
+2026-07-29 05:06:46 NDCG@10: 1.0000
+2026-07-29 05:06:46 Recall@20: 1.0000
+2026-07-29 05:06:46 NDCG@20: 1.0000
+2026-07-29 05:06:46 
+
+2026-07-29 05:06:46 Testing
+2026-07-29 05:06:46 Test. Batch 0/5
+2026-07-29 05:06:48 Test. loss_rec: 6.7830; loss_cl_pois: 2.9511; loss_cl_users: 0.5347; loss: 7.1316
+2026-07-29 05:06:48 Test. Batch 1/5
+2026-07-29 05:06:49 Test. loss_rec: 6.2769; loss_cl_pois: 2.9464; loss_cl_users: 0.5555; loss: 6.6271
+2026-07-29 05:06:49 Test. Batch 2/5
+2026-07-29 05:06:51 Test. loss_rec: 6.4286; loss_cl_pois: 2.9487; loss_cl_users: 0.5790; loss: 6.7814
+2026-07-29 05:06:51 Test. Batch 3/5
+2026-07-29 05:06:52 Test. loss_rec: 6.6401; loss_cl_pois: 2.9434; loss_cl_users: 0.5518; loss: 6.9896
+2026-07-29 05:06:52 Test. Batch 4/5
+2026-07-29 05:06:54 Test. loss_rec: 6.7399; loss_cl_pois: 2.9453; loss_cl_users: 0.0950; loss: 7.0439
+2026-07-29 05:06:54 Testing finishes
+2026-07-29 05:06:54 Testing loss: 6.914716053009033
+2026-07-29 05:06:54 Testing results:
+2026-07-29 05:06:54 Recall@1: 0.2692
+2026-07-29 05:06:54 NDCG@1: 0.2692
+2026-07-29 05:06:54 Recall@5: 0.3837
+2026-07-29 05:06:54 NDCG@5: 0.3281
+2026-07-29 05:06:54 Recall@10: 0.4252
+2026-07-29 05:06:54 NDCG@10: 0.3416
+2026-07-29 05:06:54 Recall@20: 0.4362
+2026-07-29 05:06:54 NDCG@20: 0.3445
+2026-07-29 05:06:54 ==================================
+
+
+2026-07-29 05:06:54 ================= Epoch 27/30 =================
+2026-07-29 05:06:54 Train. Batch 0/5
+2026-07-29 05:06:56 Train. loss_rec: 2.9783; loss_cl_pois: 2.4121; loss_cl_users: 0.9174; loss: 3.3113
+2026-07-29 05:06:58 Train. Batch 1/5
+2026-07-29 05:06:59 Train. loss_rec: 2.9936; loss_cl_pois: 2.4189; loss_cl_users: 0.7939; loss: 3.3149
+2026-07-29 05:07:01 Train. Batch 2/5
+2026-07-29 05:07:03 Train. loss_rec: 2.9686; loss_cl_pois: 2.4101; loss_cl_users: 0.8028; loss: 3.2899
+2026-07-29 05:07:05 Train. Batch 3/5
+2026-07-29 05:07:07 Train. loss_rec: 2.9717; loss_cl_pois: 2.4180; loss_cl_users: 0.8782; loss: 3.3013
+2026-07-29 05:07:09 Train. Batch 4/5
+2026-07-29 05:07:10 Train. loss_rec: 2.9646; loss_cl_pois: 2.4091; loss_cl_users: 0.1044; loss: 3.2160
+2026-07-29 05:07:12 Training finishes at this epoch. It takes 0.30634140968322754 min
+2026-07-29 05:07:12 Training loss: 3.2867
+2026-07-29 05:07:12 Training Epoch 27/30 results:
+2026-07-29 05:07:12 Recall@1: 0.9990
+2026-07-29 05:07:12 NDCG@1: 0.9990
+2026-07-29 05:07:12 Recall@5: 1.0000
+2026-07-29 05:07:12 NDCG@5: 0.9996
+2026-07-29 05:07:12 Recall@10: 1.0000
+2026-07-29 05:07:12 NDCG@10: 0.9996
+2026-07-29 05:07:12 Recall@20: 1.0000
+2026-07-29 05:07:12 NDCG@20: 0.9996
+2026-07-29 05:07:12 
+
+2026-07-29 05:07:12 Testing
+2026-07-29 05:07:12 Test. Batch 0/5
+2026-07-29 05:07:14 Test. loss_rec: 6.7208; loss_cl_pois: 2.9596; loss_cl_users: 0.5846; loss: 7.0752
+2026-07-29 05:07:14 Test. Batch 1/5
+2026-07-29 05:07:16 Test. loss_rec: 6.3954; loss_cl_pois: 2.9630; loss_cl_users: 0.5803; loss: 6.7497
+2026-07-29 05:07:16 Test. Batch 2/5
+2026-07-29 05:07:17 Test. loss_rec: 6.4102; loss_cl_pois: 2.9590; loss_cl_users: 0.6657; loss: 6.7727
+2026-07-29 05:07:17 Test. Batch 3/5
+2026-07-29 05:07:19 Test. loss_rec: 6.6022; loss_cl_pois: 2.9535; loss_cl_users: 0.5283; loss: 6.9503
+2026-07-29 05:07:19 Test. Batch 4/5
+2026-07-29 05:07:20 Test. loss_rec: 6.3665; loss_cl_pois: 2.9539; loss_cl_users: 0.0831; loss: 6.6702
+2026-07-29 05:07:20 Testing finishes
+2026-07-29 05:07:20 Testing loss: 6.843618583679199
+2026-07-29 05:07:20 Testing results:
+2026-07-29 05:07:20 Recall@1: 0.2758
+2026-07-29 05:07:20 NDCG@1: 0.2758
+2026-07-29 05:07:20 Recall@5: 0.3992
+2026-07-29 05:07:20 NDCG@5: 0.3409
+2026-07-29 05:07:20 Recall@10: 0.4321
+2026-07-29 05:07:20 NDCG@10: 0.3518
+2026-07-29 05:07:20 Recall@20: 0.4441
+2026-07-29 05:07:20 NDCG@20: 0.3548
+2026-07-29 05:07:20 ==================================
+
+
+2026-07-29 05:07:20 ================= Epoch 28/30 =================
+2026-07-29 05:07:20 Train. Batch 0/5
+2026-07-29 05:07:22 Train. loss_rec: 2.9445; loss_cl_pois: 2.4273; loss_cl_users: 0.8178; loss: 3.2690
+2026-07-29 05:07:24 Train. Batch 1/5
+2026-07-29 05:07:26 Train. loss_rec: 2.9122; loss_cl_pois: 2.4304; loss_cl_users: 0.8906; loss: 3.2443
+2026-07-29 05:07:28 Train. Batch 2/5
+2026-07-29 05:07:30 Train. loss_rec: 2.9216; loss_cl_pois: 2.4286; loss_cl_users: 0.9328; loss: 3.2578
+2026-07-29 05:07:32 Train. Batch 3/5
+2026-07-29 05:07:34 Train. loss_rec: 2.9088; loss_cl_pois: 2.4216; loss_cl_users: 0.8889; loss: 3.2399
+2026-07-29 05:07:36 Train. Batch 4/5
+2026-07-29 05:07:38 Train. loss_rec: 2.9127; loss_cl_pois: 2.4186; loss_cl_users: 0.2236; loss: 3.1769
+2026-07-29 05:07:39 Training finishes at this epoch. It takes 0.3215259830156962 min
+2026-07-29 05:07:39 Training loss: 3.2376
+2026-07-29 05:07:39 Training Epoch 28/30 results:
+2026-07-29 05:07:39 Recall@1: 1.0000
+2026-07-29 05:07:39 NDCG@1: 1.0000
+2026-07-29 05:07:39 Recall@5: 1.0000
+2026-07-29 05:07:39 NDCG@5: 1.0000
+2026-07-29 05:07:39 Recall@10: 1.0000
+2026-07-29 05:07:39 NDCG@10: 1.0000
+2026-07-29 05:07:39 Recall@20: 1.0000
+2026-07-29 05:07:39 NDCG@20: 1.0000
+2026-07-29 05:07:39 
+
+2026-07-29 05:07:39 Testing
+2026-07-29 05:07:39 Test. Batch 0/5
+2026-07-29 05:07:41 Test. loss_rec: 6.6133; loss_cl_pois: 2.9576; loss_cl_users: 0.5373; loss: 6.9628
+2026-07-29 05:07:41 Test. Batch 1/5
+2026-07-29 05:07:43 Test. loss_rec: 6.4076; loss_cl_pois: 2.9468; loss_cl_users: 0.5660; loss: 6.7589
+2026-07-29 05:07:43 Test. Batch 2/5
+2026-07-29 05:07:44 Test. loss_rec: 6.3909; loss_cl_pois: 2.9448; loss_cl_users: 0.5749; loss: 6.7429
+2026-07-29 05:07:44 Test. Batch 3/5
+2026-07-29 05:07:46 Test. loss_rec: 6.6318; loss_cl_pois: 2.9437; loss_cl_users: 0.5597; loss: 6.9822
+2026-07-29 05:07:46 Test. Batch 4/5
+2026-07-29 05:07:48 Test. loss_rec: 6.6859; loss_cl_pois: 2.9451; loss_cl_users: 0.0979; loss: 6.9902
+2026-07-29 05:07:48 Testing finishes
+2026-07-29 05:07:48 Testing loss: 6.887380695343017
+2026-07-29 05:07:48 Testing results:
+2026-07-29 05:07:48 Recall@1: 0.2642
+2026-07-29 05:07:48 NDCG@1: 0.2642
+2026-07-29 05:07:48 Recall@5: 0.3866
+2026-07-29 05:07:48 NDCG@5: 0.3299
+2026-07-29 05:07:48 Recall@10: 0.4195
+2026-07-29 05:07:48 NDCG@10: 0.3405
+2026-07-29 05:07:48 Recall@20: 0.4324
+2026-07-29 05:07:48 NDCG@20: 0.3437
+2026-07-29 05:07:48 ==================================
+
+
+2026-07-29 05:07:48 ================= Epoch 29/30 =================
+2026-07-29 05:07:48 Train. Batch 0/5
+2026-07-29 05:07:49 Train. loss_rec: 2.9038; loss_cl_pois: 2.4038; loss_cl_users: 0.8579; loss: 3.2300
+2026-07-29 05:07:51 Train. Batch 1/5
+2026-07-29 05:07:53 Train. loss_rec: 2.8763; loss_cl_pois: 2.4090; loss_cl_users: 0.8363; loss: 3.2009
+2026-07-29 05:07:55 Train. Batch 2/5
+2026-07-29 05:07:57 Train. loss_rec: 2.8832; loss_cl_pois: 2.4118; loss_cl_users: 0.9626; loss: 3.2206
+2026-07-29 05:07:59 Train. Batch 3/5
+2026-07-29 05:08:01 Train. loss_rec: 2.8830; loss_cl_pois: 2.4129; loss_cl_users: 0.7985; loss: 3.2041
+2026-07-29 05:08:02 Train. Batch 4/5
+2026-07-29 05:08:04 Train. loss_rec: 2.9234; loss_cl_pois: 2.4196; loss_cl_users: 0.1808; loss: 3.1835
+2026-07-29 05:08:06 Training finishes at this epoch. It takes 0.3050661285718282 min
+2026-07-29 05:08:06 Training loss: 3.2078
+2026-07-29 05:08:06 Training Epoch 29/30 results:
+2026-07-29 05:08:06 Recall@1: 1.0000
+2026-07-29 05:08:06 NDCG@1: 1.0000
+2026-07-29 05:08:06 Recall@5: 1.0000
+2026-07-29 05:08:06 NDCG@5: 1.0000
+2026-07-29 05:08:06 Recall@10: 1.0000
+2026-07-29 05:08:06 NDCG@10: 1.0000
+2026-07-29 05:08:06 Recall@20: 1.0000
+2026-07-29 05:08:06 NDCG@20: 1.0000
+2026-07-29 05:08:06 
+
+2026-07-29 05:08:06 Testing
+2026-07-29 05:08:06 Test. Batch 0/5
+2026-07-29 05:08:07 Test. loss_rec: 6.3048; loss_cl_pois: 2.9630; loss_cl_users: 0.5885; loss: 6.6600
+2026-07-29 05:08:08 Test. Batch 1/5
+2026-07-29 05:08:09 Test. loss_rec: 6.5336; loss_cl_pois: 2.9767; loss_cl_users: 0.5877; loss: 6.8900
+2026-07-29 05:08:09 Test. Batch 2/5
+2026-07-29 05:08:11 Test. loss_rec: 6.5011; loss_cl_pois: 2.9815; loss_cl_users: 0.5852; loss: 6.8578
+2026-07-29 05:08:11 Test. Batch 3/5
+2026-07-29 05:08:13 Test. loss_rec: 6.6352; loss_cl_pois: 2.9690; loss_cl_users: 0.6550; loss: 6.9976
+2026-07-29 05:08:13 Test. Batch 4/5
+2026-07-29 05:08:15 Test. loss_rec: 6.5238; loss_cl_pois: 2.9778; loss_cl_users: 0.1130; loss: 6.8329
+2026-07-29 05:08:15 Testing finishes
+2026-07-29 05:08:15 Testing loss: 6.84766731262207
+2026-07-29 05:08:15 Testing results:
+2026-07-29 05:08:15 Recall@1: 0.2711
+2026-07-29 05:08:15 NDCG@1: 0.2711
+2026-07-29 05:08:15 Recall@5: 0.3984
+2026-07-29 05:08:15 NDCG@5: 0.3380
+2026-07-29 05:08:15 Recall@10: 0.4242
+2026-07-29 05:08:15 NDCG@10: 0.3467
+2026-07-29 05:08:15 Recall@20: 0.4440
+2026-07-29 05:08:15 NDCG@20: 0.3519
+2026-07-29 05:08:15 ==================================
+
+
+2026-07-29 05:08:15 6. Final Results
+2026-07-29 05:08:15 {'Rec1': '0.2965', 'Rec5': '0.4345', 'Rec10': '0.4595', 'Rec20': '0.4685', 'NDCG1': '0.2965', 'NDCG5': '0.3686', 'NDCG10': '0.3768', 'NDCG20': '0.3791'}
+2026-07-29 05:08:15 
+
